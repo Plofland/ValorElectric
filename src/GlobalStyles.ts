@@ -71,3 +71,7 @@ button:focus-visible {
 }
 `;
 
+// Here are the colors of the logo
+// Blue - #0038ff
+// Red - #ff0000
+// White - #ffffff
