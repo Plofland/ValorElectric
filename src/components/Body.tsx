@@ -9,9 +9,6 @@ const Body = () => {
 				className="logo"
 				alt="Valor Electric logo"
 			/>
-			<a href="mailto:ploflan@gmail.com?subject=Your subject&body=Your Message">
-				<button>Contact Us</button>
-			</a>
 		</BodyContainer>
 	);
 };
