@@ -5,17 +5,17 @@ export const GlobalStyles = createGlobalStyle`
   *::before,
   *::after {
     box-sizing: border-box;
+    margin: 0;
   }
 
   html, body {
-    margin: 0;
     width: 100%;
     height: 100%;
   }
 
   body {
     font-family: system-ui, sans-serif;
-    background-color: #242424;
+    background-color: #80dbff;
   }
 
   #root {
