@@ -5,9 +5,6 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 // Plan for this footer:
-// have a "mail us" button - it should also have a mail icon
-// have a "phone us" button - it should also have a phone icon
-// have a "location" button - it should also have a location icon
 // should there be a social media section?
 // if so, install the font-awesome package for social media icons with this -> npm i --save @fortawesome/free-brands-svg-icons
 
@@ -57,14 +54,14 @@ const ContactContainer = styled.div`
 	display: flex;
 	justify-content: space-evenly;
 `;
+
 const ContactCard = styled.div`
-	border: 1px solid black;
 	display: flex;
 	width: 100%;
 	min-height: 100px;
 `;
+
 const IconContainer = styled.div`
-	border: 1px solid green;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -72,8 +69,8 @@ const IconContainer = styled.div`
 	font-size: 3rem;
 	color: #ff0000;
 `;
+
 const ContactText = styled.div`
-	border: 1px solid red;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

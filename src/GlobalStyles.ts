@@ -24,7 +24,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 `;
 
-
 // Here are the colors of the logo
 // Blue - #0038ff
 // Red - #ff0000
