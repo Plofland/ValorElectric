@@ -2,7 +2,7 @@ import styled from 'styled-components';
 // import valorElectricLogo from '/valorElectricLogo.png';
 import transparentValorElectricLogo from '/transparentValorElectricLogo.png';
 
-//todo: download PS so I can edit the logo with a white lightning bolt
+//todo: download PS so I can edit the logo with a white lightning bolt in the middle
 
 const Header = () => {
 	return (
@@ -12,10 +12,6 @@ const Header = () => {
 					<h1>Valor Electric</h1>
 				</HeaderText>
 				<LogoContainer>
-					{/* <ValorElectricLogo
-					src={valorElectricLogo}
-					alt="Valor Electric logo"
-				/> */}
 					<ValorElectricLogo
 						src={transparentValorElectricLogo}
 						alt="Valor Electric logo"
@@ -33,6 +29,14 @@ const HeaderContainer = styled.div`
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+
+	h1 {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		font-style: italic;
+		font-size: 5rem;
+		margin: 0;
+	}
 `;
 
 const LogoContainer = styled.div`
