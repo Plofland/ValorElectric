@@ -15,7 +15,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: system-ui, sans-serif;
-    background-color: #80dbff;
+    background-color: #fff2f2;
   }
 
   #root {
@@ -30,7 +30,6 @@ export const GlobalStyles = createGlobalStyle`
 // White - #ffffff
 
 // Here are the colors that I could use to offset the above saturated and harsh colors
-
 
 // Cool White - #f8f9fb
 // Soft Gray - #f4f6f8
