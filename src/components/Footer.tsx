@@ -4,9 +4,6 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-// Plan for this footer:
-// should there be a social media section?
-// if so, install the font-awesome package for social media icons with this -> npm i --save @fortawesome/free-brands-svg-icons
 
 const Footer = () => {
 	return (
@@ -67,7 +64,7 @@ const IconContainer = styled.div`
 	justify-content: center;
 	width: 25%;
 	font-size: 3rem;
-	color: #ff0000;
+	color: #ff4c4c;
 `;
 
 const ContactText = styled.div`
