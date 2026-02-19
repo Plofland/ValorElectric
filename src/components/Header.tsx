@@ -8,9 +8,7 @@ const Header = () => {
 		<>
 			<HeaderContainer>
 				<HeaderText>
-					<h1>
-						Valor Electric
-					</h1>
+					<h1>Valor Electric</h1>
 				</HeaderText>
 				<LogoContainer>
 					<ValorElectricLogo
@@ -34,91 +32,92 @@ const HeaderContainer = styled.div`
 	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 
 	h1 {
-	position: relative;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 700;
-	font-style: italic;
-	font-size: 5rem;
-	margin: 0;
-	display: inline-block;
-	cursor: pointer;
+		position: relative;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		font-style: italic;
+		font-size: 5rem;
+		margin: 0;
+		display: inline-block;
+		cursor: pointer;
 
-	/* Base color */
-	color: #000000;
-
-	/* Gradient underline remains static */
-	&::after {
-		content: '';
-		position: absolute;
-		left: 0;
-		bottom: -10px;
-		width: 100%;
-		height: 6px;
-		border-radius: 3px;
-		background: linear-gradient(90deg, #ff0000 0%, #0038ff 100%);
-		transform: skewX(-20deg);
-	}
-
-	/* Hover triggers flicker animation */
-	&:hover {
-		animation: electric-flicker-pre 0.8s forwards;
-		color: #fff8d1; /* Set to yellowish center after flicker */
-	}
-}
-
-/* Keyframes for 2–3 flickers */
-@keyframes electric-flicker-pre {
-	0% {
+		/* Base color */
 		color: #000000;
-		text-shadow: none;
-	}
-	10% {
-		text-shadow:
-			0 0 2px #ff0000,
-			0 0 4px #ff0000,
-			0 0 2px #fff8d1,
-			0 0 6px #0038ff,
-			0 0 8px #0038ff;
-	}
-	20% {
-		text-shadow: none;
-	}
-	30% {
-		text-shadow:
-			0 0 3px #ff0000,
-			0 0 6px #ff0000,
-			0 0 3px #fff8d1,
-			0 0 9px #0038ff,
-			0 0 12px #0038ff;
-	}
-	40% {
-		text-shadow: none;
-	}
-	50% {
-		text-shadow:
-			0 0 2px #ff0000,
-			0 0 4px #ff0000,
-			0 0 2px #fff8d1,
-			0 0 6px #0038ff,
-			0 0 8px #0038ff;
-	}
-	60% {
-		text-shadow: none;
-	}
-	100% {
-		text-shadow:
-			0 0 2px #ff0000,
-			0 0 4px #ff0000,
-			0 0 2px #fff8d1,
-			0 0 6px #0038ff,
-			0 0 8px #0038ff;
-		color: #fff8d1; /* Keep yellow center after flicker */
-	}
-}
 
+		/* Gradient underline remains static */
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -10px;
+			width: 100%;
+			height: 6px;
+			border-radius: 3px;
+			background: linear-gradient(
+				90deg,
+				#ff0000 0%,
+				#0038ff 100%
+			);
+			transform: skewX(-45deg);
+		}
 
+		/* Hover triggers flicker animation */
+		&:hover {
+			animation: electric-flicker-pre 0.8s forwards;
+			color: #fff8d1; /* Set to yellowish center after flicker */
+		}
+	}
+
+	/* Keyframes for 2–3 flickers */
+	@keyframes electric-flicker-pre {
+		0% {
+			color: #000000;
+			text-shadow: none;
+		}
+		10% {
+			text-shadow:
+				0 0 2px #ff0000,
+				0 0 4px #ff0000,
+				0 0 2px #fff8d1,
+				0 0 6px #0038ff,
+				0 0 8px #0038ff;
+		}
+		20% {
+			text-shadow: none;
+		}
+		30% {
+			text-shadow:
+				0 0 3px #ff0000,
+				0 0 6px #ff0000,
+				0 0 3px #fff8d1,
+				0 0 9px #0038ff,
+				0 0 12px #0038ff;
+		}
+		40% {
+			text-shadow: none;
+		}
+		50% {
+			text-shadow:
+				0 0 2px #ff0000,
+				0 0 4px #ff0000,
+				0 0 2px #fff8d1,
+				0 0 6px #0038ff,
+				0 0 8px #0038ff;
+		}
+		60% {
+			text-shadow: none;
+		}
+		100% {
+			text-shadow:
+				0 0 2px #ff0000,
+				0 0 4px #ff0000,
+				0 0 2px #fff8d1,
+				0 0 6px #0038ff,
+				0 0 8px #0038ff;
+			color: #fff8d1; /* Keep yellow center after flicker */
+		}
+	}
 `;
-
 
 const LogoContainer = styled.div`
 	width: 25%;
