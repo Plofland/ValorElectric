@@ -54,6 +54,7 @@ const BodyContainer = styled.div`
 	width: 100%;
 	height: 500px;
 	background-color: #ffffff;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* subtle drop shadow */
 `;
 
 const LeftSection = styled.div`
