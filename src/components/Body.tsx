@@ -1,14 +1,13 @@
 import styled from 'styled-components';
-import transparentValorElectricLogo from '/transparentValorElectricLogo.png';
+import electricianPortrait from '/david-cain-TVPI5pHpNFw-unsplash.jpg';
 
 const Body = () => {
 	return (
 		<BodyContainer>
 			<LeftSection>
-				<ValorElectricLogo
-					src={transparentValorElectricLogo}
-					alt="Valor Electric logo"
-				/>
+				<Portrait src={electricianPortrait} alt="Portrait of an electrician"/>	
+
+				
 			</LeftSection>
 			<RightSection>
 				<CopyContainer>
@@ -58,7 +57,7 @@ const BodyContainer = styled.div`
 `;
 
 const LeftSection = styled.div`
-	width: 50%;
+	width: 35%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -66,7 +65,7 @@ const LeftSection = styled.div`
 `;
 
 const RightSection = styled.div`
-	width: 50%;
+	width: 65%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -92,10 +91,11 @@ const CopyContainer = styled.div`
 	}
 `;
 
-const ValorElectricLogo = styled.img`
+const Portrait = styled.img`
 	max-width: 80%;
 	max-height: 80%;
 	width: auto;
 	height: auto;
 	object-fit: contain;
+	border-radius: 12px;
 `;
