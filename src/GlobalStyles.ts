@@ -28,3 +28,11 @@ export const GlobalStyles = createGlobalStyle`
 // Blue - #0038ff
 // Red - #ff0000
 // White - #ffffff
+
+// Here are the colors that I could use to offset the above saturated and harsh colors
+
+
+// Cool White - #f8f9fb
+// Soft Gray - #f4f6f8
+// Blue tinted white(to balance the blue) - #f2f6ff
+// Warm white (to balance the red) - #faf7f5
