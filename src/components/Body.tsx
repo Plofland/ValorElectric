@@ -103,7 +103,7 @@ const CopyContainer = styled.div`
 	border-radius: 12px;
 	padding: 32px;
 	max-width: 90%;
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+	box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
 
 	h3,
 	ul {
