@@ -26,7 +26,7 @@ const HeaderContainer = styled.header`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1rem 2rem;
+	padding: 1rem 4rem;
 	background-color: #f2f6ff;
 `;
 
