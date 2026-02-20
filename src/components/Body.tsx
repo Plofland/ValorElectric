@@ -67,6 +67,10 @@ const BodyContainer = styled.div`
 	margin: 0;
 	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65);
 	align-items: stretch;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
 `;
 
 const LeftSection = styled.div`
@@ -75,6 +79,11 @@ const LeftSection = styled.div`
 	justify-content: center;
 	align-items: center;
 	padding: 2rem;
+
+	@media (max-width: 768px) {
+		width: 100%;
+		padding: 1.5rem 0;
+	}
 `;
 
 const RightSection = styled.div`
@@ -82,6 +91,11 @@ const RightSection = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	@media (max-width: 768px) {
+		width: 100%;
+		padding: 1rem 0;
+	}
 `;
 
 const CopyContainer = styled.div`
@@ -99,6 +113,10 @@ const CopyContainer = styled.div`
 
 	ul {
 		padding-left: 20px;
+	}
+
+	@media (max-width: 768px) {
+		padding: 24px;
 	}
 `;
 
