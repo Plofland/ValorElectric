@@ -65,7 +65,7 @@ const BodyContainer = styled.div`
 	min-height: 70vh;
 	background-color: #ffffff;
 	margin: 0;
-	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65);
 	align-items: stretch;
 `;
 
@@ -89,7 +89,7 @@ const CopyContainer = styled.div`
 	border-radius: 12px;
 	padding: 32px;
 	max-width: 90%;
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
 
 	h3,
 	ul {

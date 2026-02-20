@@ -58,6 +58,7 @@ export default Footer;
 const ContactContainer = styled.div`
 	display: flex;
 	justify-content: space-evenly;
+	padding: 1rem 2rem;
 `;
 
 const ContactCard = styled.a`

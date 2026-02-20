@@ -26,9 +26,8 @@ const HeaderContainer = styled.header`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1.5rem 2rem;
+	padding: 1rem 2rem;
 	background-color: #f2f6ff;
-	
 `;
 
 const TitleContainer = styled.div`
