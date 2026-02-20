@@ -28,12 +28,19 @@ const HeaderContainer = styled.header`
 	align-items: center;
 	padding: 1rem 4rem;
 	background-color: #f2f6ff;
+
+	/* Mobile: stack items */
+	@media (max-width: 768px) {
+		flex-direction: column;
+		align-items: center;
+		padding: 1rem 2rem;
+	}
 `;
 
 const TitleContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	align-items: center; 
+	align-items: center;
 	justify-content: center;
 
 	/* Check the border of the container */
@@ -48,6 +55,10 @@ const TitleContainer = styled.div`
 		margin: 0;
 		cursor: pointer;
 		color: #000000;
+
+		@media (max-width: 768px) {
+			text-align: center;
+		}
 
 		/* Check the border of the h1 */
 		/* border: 1px solid #000000; */
@@ -130,10 +141,20 @@ const TitleContainer = styled.div`
 const LogoContainer = styled.div`
 	display: flex;
 	justify-content: flex-end;
+
+	@media (max-width: 768px) {
+		margin-top: 1rem;
+		justify-content: center;
+	}
 `;
 
 const ValorElectricLogo = styled.img`
 	width: 140px;
 	height: 140px;
 	object-fit: contain;
+
+	@media (max-width: 768px) {
+		width: 100px;
+		height: 100px;
+	}
 `;
