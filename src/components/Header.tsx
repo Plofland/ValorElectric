@@ -27,7 +27,6 @@ const HeaderContainer = styled.header`
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem 4rem;
-	background-color: #f2f6ff;
 
 	/* Mobile: stack items */
 	@media (max-width: 768px) {
