@@ -3,51 +3,56 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { Fade } from 'react-awesome-reveal';
 
 const Footer = () => {
 	return (
 		<>
 			<ContactContainer>
-				{/* Find Us (Clickable) */}
-				<ContactCard
-					href="https://maps.google.com/?q=123+Fake+Street"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<IconContainer>
-						<FontAwesomeIcon
-							icon={faLocationDot}
-						/>
-					</IconContainer>
-					<ContactText>
-						<h3>Find us</h3>
-						123 Fake Street
-					</ContactText>
-				</ContactCard>
+				<Fade direction='up' cascade damping={0.15} triggerOnce>
+					{/* Find Us (Clickable) */}
+					<ContactCard
+						href="https://maps.google.com/?q=123+Fake+Street"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<IconContainer>
+							<FontAwesomeIcon
+								icon={faLocationDot}
+							/>
+						</IconContainer>
+						<ContactText>
+							<h3>Find us</h3>
+							123 Fake Street
+						</ContactText>
+					</ContactCard>
 
-				{/* Phone Us (NOT Clickable) */}
-				<ContactCard href='tel:5555555555'>
-					<IconContainer>
-						<FontAwesomeIcon icon={faPhone} />
-					</IconContainer>
-					<ContactText>
-						<h3>Phone us</h3>
-						555-555-5555
-					</ContactText>
-				</ContactCard>
+					{/* Phone Us (NOT Clickable) */}
+					<ContactCard href="tel:5555555555">
+						<IconContainer>
+							<FontAwesomeIcon
+								icon={faPhone}
+							/>
+						</IconContainer>
+						<ContactText>
+							<h3>Phone us</h3>
+							555-555-5555
+						</ContactText>
+					</ContactCard>
 
-				{/* Mail Us (Clickable) */}
-				<ContactCard href="mailto:valorElectric@gmail.com">
-					<IconContainer>
-						<FontAwesomeIcon
-							icon={faEnvelope}
-						/>
-					</IconContainer>
-					<ContactText>
-						<h3>Mail us</h3>
-						valorElectric@gmail.com
-					</ContactText>
-				</ContactCard>
+					{/* Mail Us (Clickable) */}
+					<ContactCard href="mailto:valorElectric@gmail.com">
+						<IconContainer>
+							<FontAwesomeIcon
+								icon={faEnvelope}
+							/>
+						</IconContainer>
+						<ContactText>
+							<h3>Mail us</h3>
+							valorElectric@gmail.com
+						</ContactText>
+					</ContactCard>
+				</Fade>
 			</ContactContainer>
 		</>
 	);
@@ -77,14 +82,13 @@ const ContactCard = styled.a`
 	text-decoration: none;
 	color: inherit;
 	cursor: pointer;
-	
+
 	/* border: 1px solid #000000; */
-	
+
 	&:hover {
 		background: rgba(0, 0, 0, 0.05);
 	}
-	
-	
+
 	@media (max-width: 768px) {
 		background-color: #faf7f5;
 		padding: 1rem;

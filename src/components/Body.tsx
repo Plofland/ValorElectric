@@ -6,52 +6,65 @@ const Body = () => {
 	return (
 		<BodyContainer>
 			<LeftSection>
-				<Portrait
-					src={electricianPortrait}
-					alt="Portrait of an electrician"
-				/>
+				<Fade direction="left">
+					<Portrait
+						src={electricianPortrait}
+						alt="Portrait of an electrician"
+					/>
+				</Fade>
 			</LeftSection>
 			<RightSection>
-				<CopyContainer>
-					<h3>
-						Our licensed electricians provide
-						safe, reliable electrical solutions
-						for homes and businesses of all
-						sizes. From small repairs to full
-						system installations, we deliver
-						quality workmanship, clear
-						communication, and dependable
-						service you can trust.
-					</h3>
-					<ul>
-						<Fade
-							cascade
-							damping={0.15}
-							triggerOnce
-						>
-							<li>
-								Residential Electrical
-								Services
-							</li>
-							<li>
-								Commercial Electrical
-								Services
-							</li>
-							<li>
-								Lighting Installation and
-								Upgrades
-							</li>
-							<li>
-								Panel Upgrades and Circuit
-								Breaker Replacement
-							</li>
-							<li>
-								Wiring for Renovations, New
-								Builds, and Additions
-							</li>
-						</Fade>
-					</ul>
-				</CopyContainer>
+				<Fade
+					cascade
+					direction="right"
+					damping={0.15}
+					triggerOnce
+				>
+					<CopyContainer>
+						<h3>
+							Our licensed electricians
+							provide safe, reliable
+							electrical solutions for homes
+							and businesses of all sizes.
+							From small repairs to full
+							system installations, we deliver
+							quality workmanship, clear
+							communication, and dependable
+							service you can trust.
+						</h3>
+						<ul>
+							<Fade
+								cascade
+								damping={0.15}
+								delay={600}
+								triggerOnce
+							>
+								<li>
+									Residential Electrical
+									Services
+								</li>
+								<li>
+									Commercial Electrical
+									Services
+								</li>
+								<li>
+									Lighting Installation
+									and Upgrades
+								</li>
+								<li>
+									Panel Upgrades and
+									Circuit Breaker
+									Replacement
+								</li>
+								<li>
+									Wiring for Renovations,
+									New Builds, and
+									Additions
+								</li>
+							</Fade>
+						</ul>
+					</CopyContainer>
+				</Fade>
 			</RightSection>
 		</BodyContainer>
 	);
