@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 import electricianPortrait from '/david-cain-TVPI5pHpNFw-unsplash.jpg';
+import { Fade } from 'react-awesome-reveal';
 
 const Body = () => {
 	return (
 		<BodyContainer>
 			<LeftSection>
-				<Portrait src={electricianPortrait} alt="Portrait of an electrician"/>	
-
-				
+				<Portrait
+					src={electricianPortrait}
+					alt="Portrait of an electrician"
+				/>
 			</LeftSection>
 			<RightSection>
 				<CopyContainer>
@@ -22,24 +24,32 @@ const Body = () => {
 						service you can trust.
 					</h3>
 					<ul>
-						<li>
-							Residential Electrical Services
-						</li>
-						<li>
-							Commercial Electrical Services
-						</li>
-						<li>
-							Lighting Installation and
-							Upgrades
-						</li>
-						<li>
-							Panel Upgrades and Circuit
-							Breaker Replacement
-						</li>
-						<li>
-							Wiring for Renovations, New
-							Builds, and Additions
-						</li>
+						<Fade
+							cascade
+							damping={0.15}
+							triggerOnce
+						>
+							<li>
+								Residential Electrical
+								Services
+							</li>
+							<li>
+								Commercial Electrical
+								Services
+							</li>
+							<li>
+								Lighting Installation and
+								Upgrades
+							</li>
+							<li>
+								Panel Upgrades and Circuit
+								Breaker Replacement
+							</li>
+							<li>
+								Wiring for Renovations, New
+								Builds, and Additions
+							</li>
+						</Fade>
 					</ul>
 				</CopyContainer>
 			</RightSection>
@@ -52,22 +62,23 @@ export default Body;
 const BodyContainer = styled.div`
 	display: flex;
 	width: 100%;
-	height: 500px;
+	min-height: 70vh;
 	background-color: #ffffff;
-	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* subtle drop shadow */
+	margin: 0;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+	align-items: stretch;
 `;
 
 const LeftSection = styled.div`
 	width: 35%;
-	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 2rem;
 `;
 
 const RightSection = styled.div`
 	width: 65%;
-	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -78,8 +89,7 @@ const CopyContainer = styled.div`
 	border-radius: 12px;
 	padding: 32px;
 	max-width: 90%;
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 
 	h3,
 	ul {
