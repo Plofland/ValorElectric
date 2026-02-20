@@ -70,6 +70,7 @@ const BodyContainer = styled.div`
 
 	@media (max-width: 768px) {
 		flex-direction: column;
+		padding: 1rem;
 	}
 `;
 
@@ -82,7 +83,7 @@ const LeftSection = styled.div`
 
 	@media (max-width: 768px) {
 		width: 100%;
-		padding: 1.5rem 0;
+		padding: 1rem 0;
 	}
 `;
 
