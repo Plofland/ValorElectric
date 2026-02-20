@@ -59,6 +59,7 @@ const ContactContainer = styled.div`
 	display: flex;
 	justify-content: space-evenly;
 	padding: 1rem 2rem;
+	margin: 1rem 0;
 	/* background-color: #f2f6ff; */
 
 	/* Check the border of the container */
@@ -77,19 +78,19 @@ const ContactCard = styled.a`
 	text-decoration: none;
 	color: inherit;
 	cursor: pointer;
-	background-color: #faf7f5;
-
+	
 	/* border: 1px solid #000000; */
-
+	
 	&:hover {
 		background: rgba(0, 0, 0, 0.05);
 	}
-
+	
 	&.static {
 		cursor: default;
 	}
-
+	
 	@media (max-width: 768px) {
+		background-color: #faf7f5;
 		padding: 1rem;
 		margin: 0.5rem 0;
 		border-radius: 12px;
@@ -108,7 +109,7 @@ const IconContainer = styled.div`
 
 const ContactText = styled.div`
 	/* border: 1px solid #000000; */
-	
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
