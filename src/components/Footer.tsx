@@ -26,7 +26,7 @@ const Footer = () => {
 				</ContactCard>
 
 				{/* Phone Us (NOT Clickable) */}
-				<ContactCard as="div" className="static">
+				<ContactCard href='tel:5555555555'>
 					<IconContainer>
 						<FontAwesomeIcon icon={faPhone} />
 					</IconContainer>
@@ -60,7 +60,6 @@ const ContactContainer = styled.div`
 	justify-content: space-evenly;
 	padding: 1rem 2rem;
 	margin: 1rem 0;
-	/* background-color: #f2f6ff; */
 
 	/* Check the border of the container */
 	/* border: 1px solid #000000; */
@@ -85,9 +84,6 @@ const ContactCard = styled.a`
 		background: rgba(0, 0, 0, 0.05);
 	}
 	
-	&.static {
-		cursor: default;
-	}
 	
 	@media (max-width: 768px) {
 		background-color: #faf7f5;
