@@ -16,7 +16,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: system-ui, sans-serif;
-    background-color: #fff2f2;
+    background-color: #f2f6ff;
   }
 
   #root {
