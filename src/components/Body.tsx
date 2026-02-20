@@ -65,7 +65,7 @@ const BodyContainer = styled.div`
 	min-height: 70vh;
 	background-color: #ffffff;
 	margin: 0;
-	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65);
+	box-shadow: 0 0px 30px rgba(0, 0, 0, 0.65);
 	align-items: stretch;
 
 	@media (max-width: 768px) {
