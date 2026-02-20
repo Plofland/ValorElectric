@@ -6,15 +6,15 @@ const Body = () => {
 	return (
 		<BodyContainer>
 			<LeftSection>
-				<Fade direction="left">
+				<CenteredFade direction="left" triggerOnce>
 					<Portrait
 						src={electricianPortrait}
 						alt="Portrait of an electrician"
 					/>
-				</Fade>
+				</CenteredFade>
 			</LeftSection>
 			<RightSection>
-				<Fade
+				<CenteredFade
 					cascade
 					direction="right"
 					damping={0.15}
@@ -64,7 +64,7 @@ const Body = () => {
 							</Fade>
 						</ul>
 					</CopyContainer>
-				</Fade>
+				</CenteredFade>
 			</RightSection>
 		</BodyContainer>
 	);
@@ -79,7 +79,7 @@ const BodyContainer = styled.div`
 	background-color: #ffffff;
 	margin: 0;
 	box-shadow: 0 0px 30px rgba(0, 0, 0, 0.65);
-	align-items: stretch;
+	/* border: 1px solid #000000; */
 
 	@media (max-width: 768px) {
 		flex-direction: column;
@@ -88,11 +88,12 @@ const BodyContainer = styled.div`
 `;
 
 const LeftSection = styled.div`
-	width: 35%;
+	flex: 0 0 35%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 2rem;
+	/* border: 1px solid #000000; */
 
 	@media (max-width: 768px) {
 		width: 100%;
@@ -101,10 +102,11 @@ const LeftSection = styled.div`
 `;
 
 const RightSection = styled.div`
-	width: 65%;
+	flex: 0 0 65%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	/* border: 1px solid #000000; */
 
 	@media (max-width: 768px) {
 		width: 100%;
@@ -112,11 +114,19 @@ const RightSection = styled.div`
 	}
 `;
 
+const CenteredFade = styled(Fade)`
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;
+
 const CopyContainer = styled.div`
 	background-color: #faf7f5;
 	border-radius: 12px;
 	padding: 32px;
-	max-width: 90%;
+	max-width: 600px;
+	width: 100%;
 	box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
 
 	h3,
@@ -137,8 +147,6 @@ const CopyContainer = styled.div`
 const Portrait = styled.img`
 	max-width: 80%;
 	max-height: 80%;
-	width: auto;
-	height: auto;
 	object-fit: contain;
 	border-radius: 12px;
 `;
