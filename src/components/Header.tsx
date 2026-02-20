@@ -1,15 +1,13 @@
 import styled from 'styled-components';
 import transparentValorElectricLogo from '/transparentValorElectricLogo.png';
 
-//todo: download PS so I can edit the logo with a white lightning bolt in the middle
-
 const Header = () => {
 	return (
 		<>
 			<HeaderContainer>
-				<HeaderText>
+				<TitleContainer>
 					<h1>Valor Electric</h1>
-				</HeaderText>
+				</TitleContainer>
 				<LogoContainer>
 					<ValorElectricLogo
 						src={transparentValorElectricLogo}
@@ -23,33 +21,45 @@ const Header = () => {
 
 export default Header;
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.header`
+	width: 100%;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
-	padding: 1.5rem 0;
+	padding: 1.5rem 2rem;
 	background-color: #f2f6ff;
-	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+	
+`;
+
+const TitleContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center; 
+	justify-content: center;
+
+	/* Check the border of the container */
+	/* border: 1px solid #000000; */
 
 	h1 {
 		position: relative;
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 700;
 		font-style: italic;
-		font-size: 5rem;
+		font-size: 3rem;
 		margin: 0;
-		display: inline-block;
 		cursor: pointer;
-
-		/* Base color */
 		color: #000000;
+
+		/* Check the border of the h1 */
+		/* border: 1px solid #000000; */
 
 		/* Gradient underline remains static */
 		&::after {
 			content: '';
 			position: absolute;
-			left: 0;
+			left: 50%;
 			bottom: -10px;
+			transform: translateX(-50%) skewX(-45deg); /* center the underline */
 			width: 100%;
 			height: 6px;
 			border-radius: 3px;
@@ -58,13 +68,12 @@ const HeaderContainer = styled.div`
 				#ff0000 0%,
 				#0038ff 100%
 			);
-			transform: skewX(-45deg);
 		}
 
 		/* Hover triggers flicker animation */
 		&:hover {
 			animation: electric-flicker-pre 0.8s forwards;
-			color: #fff8d1; /* Set to yellowish center after flicker */
+			color: #fff8d1;
 		}
 	}
 
@@ -120,14 +129,12 @@ const HeaderContainer = styled.div`
 `;
 
 const LogoContainer = styled.div`
-	width: 25%;
-`;
-
-const HeaderText = styled.div`
-	font-size: 3rem;
+	display: flex;
+	justify-content: flex-end;
 `;
 
 const ValorElectricLogo = styled.img`
-	width: 100%;
-	height: 100%;
+	width: 140px;
+	height: 140px;
+	object-fit: contain;
 `;
