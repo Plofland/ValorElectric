@@ -59,15 +59,27 @@ const ContactContainer = styled.div`
 	display: flex;
 	justify-content: space-evenly;
 	padding: 1rem 2rem;
+	/* background-color: #f2f6ff; */
+
+	/* Check the border of the container */
+	/* border: 1px solid #000000; */
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
 `;
 
 const ContactCard = styled.a`
 	display: flex;
+	align-items: center;
 	width: 100%;
 	min-height: 100px;
 	text-decoration: none;
 	color: inherit;
 	cursor: pointer;
+	background-color: #faf7f5;
+
+	/* border: 1px solid #000000; */
 
 	&:hover {
 		background: rgba(0, 0, 0, 0.05);
@@ -75,6 +87,13 @@ const ContactCard = styled.a`
 
 	&.static {
 		cursor: default;
+	}
+
+	@media (max-width: 768px) {
+		padding: 1rem;
+		margin: 0.5rem 0;
+		border-radius: 12px;
+		box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 	}
 `;
 
@@ -88,6 +107,8 @@ const IconContainer = styled.div`
 `;
 
 const ContactText = styled.div`
+	/* border: 1px solid #000000; */
+	
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
