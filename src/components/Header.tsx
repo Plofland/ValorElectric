@@ -48,6 +48,13 @@ const CompanyContainer = styled.div`
 	gap: 0.75rem;
 	cursor: pointer;
 
+	svg {
+		font-size: 2.5rem;  /* match h1 font-size */
+		line-height: 1;
+		color: #000000;
+		padding: 0.25rem;
+	}
+
 	/* Trigger flicker on BOTH icon + text */
 	&:hover h1 {
 		animation: electric-flicker-pre 0.8s forwards;
@@ -160,10 +167,6 @@ const TitleContainer = styled.div`
 		}
 	}
 
-	svg {
-		font-size: 3.4rem;
-		color: #000000;
-	}
 
 	/* Bulb flicker animation */
 	@keyframes bulb-flicker {
