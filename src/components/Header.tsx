@@ -5,15 +5,15 @@ const Header = () => {
 	return (
 		<>
 			<HeaderContainer>
-				<TitleContainer>
-					<h1>Valor Electric</h1>
-				</TitleContainer>
 				<LogoContainer>
 					<ValorElectricLogo
 						src={transparentValorElectricLogo}
 						alt="Valor Electric logo"
 					/>
 				</LogoContainer>
+				<TitleContainer>
+					<h1>Valor Electric</h1>
+				</TitleContainer>
 			</HeaderContainer>
 		</>
 	);
