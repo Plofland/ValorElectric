@@ -9,7 +9,12 @@ const Footer = () => {
 	return (
 		<>
 			<ContactContainer>
-				<Fade direction='up' cascade damping={0.15} triggerOnce>
+				<Fade
+					direction="up"
+					cascade
+					damping={0.15}
+					triggerOnce
+				>
 					{/* Find Us (Clickable) */}
 					<ContactCard
 						href="https://maps.google.com/?q=123+Fake+Street"
@@ -22,7 +27,7 @@ const Footer = () => {
 							/>
 						</IconContainer>
 						<ContactText>
-							<h3>Find us</h3>
+							<h3>Find Us</h3>
 							123 Fake Street
 						</ContactText>
 					</ContactCard>
@@ -35,7 +40,7 @@ const Footer = () => {
 							/>
 						</IconContainer>
 						<ContactText>
-							<h3>Phone us</h3>
+							<h3>Call Us</h3>
 							555-555-5555
 						</ContactText>
 					</ContactCard>
@@ -48,7 +53,7 @@ const Footer = () => {
 							/>
 						</IconContainer>
 						<ContactText>
-							<h3>Mail us</h3>
+							<h3>Mail Us</h3>
 							valorElectric@gmail.com
 						</ContactText>
 					</ContactCard>
