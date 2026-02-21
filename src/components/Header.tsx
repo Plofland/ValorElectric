@@ -57,10 +57,13 @@ const CompanyContainer = styled.div`
 	&:hover svg {
 		animation: bulb-flicker 1.2s forwards;
 	}
+
+	&:hover h1::after {
+		animation: underline-glow 1.2s forwards;
+	}
 `;
 
 const TitleContainer = styled.div`
-	border: 1px solid #000000;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -92,7 +95,7 @@ const TitleContainer = styled.div`
 			position: absolute;
 			left: 50%;
 			bottom: -10px;
-			transform: translateX(-50%) skewX(-45deg); /* center the underline */
+			transform: translateX(-50%) skewX(-45deg);
 			width: 100%;
 			height: 6px;
 			border-radius: 3px;
@@ -101,8 +104,10 @@ const TitleContainer = styled.div`
 				#ff0000 0%,
 				#0038ff 100%
 			);
-		}
 
+			/* Always visible but subtle */
+			filter: brightness(0.8);
+		}
 	}
 
 	/* Keyframes for 2–3 flickers */
@@ -156,87 +161,149 @@ const TitleContainer = styled.div`
 	}
 
 	svg {
-	font-size: 2.4rem;
-	color: #000000;
-}
-
-/* Bulb flicker animation */
-@keyframes bulb-flicker {
-
-	// sync the lightbulb & company name animations
-	/* ---- SYNC SECTION (0% → 66%) ---- */
-	0% {
+		font-size: 3.4rem;
 		color: #000000;
-		filter: none;
 	}
 
-	6.6% {
-		color: #ffea00;
-		filter: drop-shadow(0 0 4px #ffea00)
+	/* Bulb flicker animation */
+	@keyframes bulb-flicker {
+		// sync the lightbulb, underline & company name animations
+		/* ---- SYNC SECTION (0% → 66%) ---- */
+		0% {
+			color: #000000;
+			filter: none;
+		}
+
+		6.6% {
+			color: #ffea00;
+			filter: drop-shadow(0 0 4px #ffea00)
 				drop-shadow(0 0 8px #ff0000)
 				drop-shadow(0 0 10px #0038ff);
-	}
-	13.3% {
-		color: #000000;
-		filter: none;
-	}
-	20% {
-		color: #ffea00;
-		filter: drop-shadow(0 0 6px #ffea00)
+		}
+		13.3% {
+			color: #000000;
+			filter: none;
+		}
+		20% {
+			color: #ffea00;
+			filter: drop-shadow(0 0 6px #ffea00)
 				drop-shadow(0 0 10px #ff0000)
 				drop-shadow(0 0 14px #0038ff);
-	}
-	26.6% {
-		color: #000000;
-		filter: none;
-	}
-	33.3% {
-		color: #ffea00;
-		filter: drop-shadow(0 0 4px #ffea00)
+		}
+		26.6% {
+			color: #000000;
+			filter: none;
+		}
+		33.3% {
+			color: #ffea00;
+			filter: drop-shadow(0 0 4px #ffea00)
 				drop-shadow(0 0 8px #ff0000)
 				drop-shadow(0 0 10px #0038ff);
-	}
-	40% {
-		color: #000000;
-		filter: none;
+		}
+		40% {
+			color: #000000;
+			filter: none;
+		}
+
+		66.6% {
+			color: #ffea00;
+			filter: drop-shadow(0 0 6px #ffea00)
+				drop-shadow(0 0 10px #ff0000)
+				drop-shadow(0 0 14px #0038ff);
+		}
+
+		/* ---- EXTRA BULB-ONLY FLICKERS (66% → 100%) ---- */
+		75% {
+			color: #000000;
+			filter: none;
+		}
+		82% {
+			color: #ffea00;
+			filter: drop-shadow(0 0 6px #ffea00)
+				drop-shadow(0 0 10px #ff0000)
+				drop-shadow(0 0 14px #0038ff);
+		}
+		88% {
+			color: #000000;
+			filter: none;
+		}
+		94% {
+			color: #ffea00;
+			filter: drop-shadow(0 0 6px #ffea00)
+				drop-shadow(0 0 10px #ff0000)
+				drop-shadow(0 0 14px #0038ff);
+		}
+
+		100% {
+			color: #ffea00;
+			filter: drop-shadow(0 0 6px #ffea00)
+				drop-shadow(0 0 10px #ff0000)
+				drop-shadow(0 0 14px #0038ff);
+		}
 	}
 
-	66.6% {
-		color: #ffea00;
-		filter: drop-shadow(0 0 6px #ffea00)
-				drop-shadow(0 0 10px #ff0000)
-				drop-shadow(0 0 14px #0038ff);
-	}
+	@keyframes underline-glow {
+		// sync the lightbulb, underline & company name animations
+		/* ---- SYNC SECTION (0% → 66.6%) ---- */
 
-	/* ---- EXTRA BULB-ONLY FLICKERS (66% → 100%) ---- */
-	75% {
-		color: #000000;
-		filter: none;
-	}
-	82% {
-		color: #ffea00;
-		filter: drop-shadow(0 0 6px #ffea00)
-				drop-shadow(0 0 10px #ff0000)
-				drop-shadow(0 0 14px #0038ff);
-	}
-	88% {
-		color: #000000;
-		filter: none;
-	}
-	94% {
-		color: #ffea00;
-		filter: drop-shadow(0 0 6px #ffea00)
-				drop-shadow(0 0 10px #ff0000)
-				drop-shadow(0 0 14px #0038ff);
-	}
+		0% {
+			filter: brightness(0.8);
+		}
 
-	100% {
-		color: #ffea00;
-		filter: drop-shadow(0 0 6px #ffea00)
-				drop-shadow(0 0 10px #ff0000)
-				drop-shadow(0 0 14px #0038ff);
+		6.6% {
+			filter: brightness(1.4)
+				drop-shadow(0 0 4px #ff0000)
+				drop-shadow(0 0 6px #0038ff);
+		}
+
+		13.3% {
+			filter: brightness(0.8);
+		}
+
+		20% {
+			filter: brightness(1.6)
+				drop-shadow(0 0 6px #ff0000)
+				drop-shadow(0 0 10px #0038ff);
+		}
+
+		26.6% {
+			filter: brightness(0.8);
+		}
+
+		33.3% {
+			filter: brightness(1.4)
+				drop-shadow(0 0 4px #ff0000)
+				drop-shadow(0 0 6px #0038ff);
+		}
+
+		40% {
+			filter: brightness(0.8);
+		}
+
+		66.6% {
+			filter: brightness(1.6)
+				drop-shadow(0 0 6px #ff0000)
+				drop-shadow(0 0 10px #0038ff);
+		}
+
+		/* ---- UNDERLINE-ONLY SECTION (66% → 100%) ---- */
+
+		85% {
+			filter: brightness(0.8);
+		}
+
+		92% {
+			filter: brightness(1.8)
+				drop-shadow(0 0 8px #ff0000)
+				drop-shadow(0 0 12px #0038ff);
+		}
+
+		100% {
+			filter: brightness(1.6)
+				drop-shadow(0 0 6px #ff0000)
+				drop-shadow(0 0 10px #0038ff);
+		}
 	}
-}
 `;
 
 const LogoContainer = styled.div`
