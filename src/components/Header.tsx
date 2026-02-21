@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import transparentValorElectricLogo from '/transparentValorElectricLogo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
 	return (
@@ -11,9 +13,12 @@ const Header = () => {
 						alt="Valor Electric logo"
 					/>
 				</LogoContainer>
-				<TitleContainer>
-					<h1>Valor Electric</h1>
-				</TitleContainer>
+				<CompanyContainer>
+					<FontAwesomeIcon icon={faLightbulb} />
+					<TitleContainer>
+						<h1>Valor Electric</h1>
+					</TitleContainer>
+				</CompanyContainer>
 			</HeaderContainer>
 		</>
 	);
@@ -36,7 +41,26 @@ const HeaderContainer = styled.header`
 	}
 `;
 
+const CompanyContainer = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.75rem;
+	cursor: pointer;
+
+	/* Trigger flicker on BOTH icon + text */
+	&:hover h1 {
+		animation: electric-flicker-pre 0.8s forwards;
+		color: #fff8d1;
+	}
+
+	&:hover svg {
+		animation: bulb-flicker 1.2s forwards;
+	}
+`;
+
 const TitleContainer = styled.div`
+	border: 1px solid #000000;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -79,11 +103,6 @@ const TitleContainer = styled.div`
 			);
 		}
 
-		/* Hover triggers flicker animation */
-		&:hover {
-			animation: electric-flicker-pre 0.8s forwards;
-			color: #fff8d1;
-		}
 	}
 
 	/* Keyframes for 2–3 flickers */
@@ -135,6 +154,89 @@ const TitleContainer = styled.div`
 			color: #fff8d1; /* Keep yellow center after flicker */
 		}
 	}
+
+	svg {
+	font-size: 2.4rem;
+	color: #000000;
+}
+
+/* Bulb flicker animation */
+@keyframes bulb-flicker {
+
+	// sync the lightbulb & company name animations
+	/* ---- SYNC SECTION (0% → 66%) ---- */
+	0% {
+		color: #000000;
+		filter: none;
+	}
+
+	6.6% {
+		color: #ffea00;
+		filter: drop-shadow(0 0 4px #ffea00)
+				drop-shadow(0 0 8px #ff0000)
+				drop-shadow(0 0 10px #0038ff);
+	}
+	13.3% {
+		color: #000000;
+		filter: none;
+	}
+	20% {
+		color: #ffea00;
+		filter: drop-shadow(0 0 6px #ffea00)
+				drop-shadow(0 0 10px #ff0000)
+				drop-shadow(0 0 14px #0038ff);
+	}
+	26.6% {
+		color: #000000;
+		filter: none;
+	}
+	33.3% {
+		color: #ffea00;
+		filter: drop-shadow(0 0 4px #ffea00)
+				drop-shadow(0 0 8px #ff0000)
+				drop-shadow(0 0 10px #0038ff);
+	}
+	40% {
+		color: #000000;
+		filter: none;
+	}
+
+	66.6% {
+		color: #ffea00;
+		filter: drop-shadow(0 0 6px #ffea00)
+				drop-shadow(0 0 10px #ff0000)
+				drop-shadow(0 0 14px #0038ff);
+	}
+
+	/* ---- EXTRA BULB-ONLY FLICKERS (66% → 100%) ---- */
+	75% {
+		color: #000000;
+		filter: none;
+	}
+	82% {
+		color: #ffea00;
+		filter: drop-shadow(0 0 6px #ffea00)
+				drop-shadow(0 0 10px #ff0000)
+				drop-shadow(0 0 14px #0038ff);
+	}
+	88% {
+		color: #000000;
+		filter: none;
+	}
+	94% {
+		color: #ffea00;
+		filter: drop-shadow(0 0 6px #ffea00)
+				drop-shadow(0 0 10px #ff0000)
+				drop-shadow(0 0 14px #0038ff);
+	}
+
+	100% {
+		color: #ffea00;
+		filter: drop-shadow(0 0 6px #ffea00)
+				drop-shadow(0 0 10px #ff0000)
+				drop-shadow(0 0 14px #0038ff);
+	}
+}
 `;
 
 const LogoContainer = styled.div`
