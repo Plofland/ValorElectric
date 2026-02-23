@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faSquareFacebook } from '@fortawesome/free-brands-svg-icons';
 import { Fade } from 'react-awesome-reveal';
 
 const Footer = () => {
@@ -58,6 +59,16 @@ const Footer = () => {
 							<FontAwesomeIcon
 								icon={faEnvelope}
 							/>
+						</IconContainer>
+						<ContactText>
+							<h3>Mail Us</h3>
+							valorElectric@gmail.com
+						</ContactText>
+					</ContactCard>
+					{/* Facebook (Clickable) */}
+					<ContactCard href="https://www.facebook.com/profile.php?id=61574838629616">
+						<IconContainer>
+							<FontAwesomeIcon icon={faSquareFacebook} />
 						</IconContainer>
 						<ContactText>
 							<h3>Mail Us</h3>
