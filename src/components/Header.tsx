@@ -16,7 +16,7 @@ const Header = () => {
 				<CompanyContainer>
 					<FontAwesomeIcon icon={faLightbulb} />
 					<TitleContainer>
-						<h1>Valor Electric</h1>
+						<h1>Valor Electric, LLC</h1>
 						<p>Veteran Owned & Operated</p>
 					</TitleContainer>
 				</CompanyContainer>
