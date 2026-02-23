@@ -17,6 +17,7 @@ const Header = () => {
 					<FontAwesomeIcon icon={faLightbulb} />
 					<TitleContainer>
 						<h1>Valor Electric</h1>
+						<p>Veteran Owned & Operated</p>
 					</TitleContainer>
 				</CompanyContainer>
 			</HeaderContainer>
@@ -68,6 +69,10 @@ const CompanyContainer = styled.div`
 	&:hover h1::after {
 		animation: underline-glow 1.2s forwards;
 	}
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
 `;
 
 const TitleContainer = styled.div`
@@ -115,6 +120,12 @@ const TitleContainer = styled.div`
 			/* Always visible but subtle */
 			filter: brightness(0.8);
 		}
+	}
+
+	p {
+		margin-top: 20px;
+		margin-bottom: 0;
+		font-size: 1.25rem;
 	}
 
 	/* Keyframes for 2–3 flickers */
@@ -316,6 +327,7 @@ const LogoContainer = styled.div`
 	@media (max-width: 768px) {
 		margin-top: 1rem;
 		justify-content: center;
+		padding-left: 1rem;
 	}
 `;
 
