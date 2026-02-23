@@ -21,17 +21,19 @@ const Body = () => {
 					triggerOnce
 				>
 					<CopyContainer>
-						<h3>
-							Our licensed electricians
-							provide safe, reliable
-							electrical solutions for homes
-							and businesses of all sizes.
-							From small repairs to full
-							system installations, we deliver
+						<h3>Our Mission</h3>
+						<p>
+							We strive to provide safe and
+							reliable electrical solutions
+							for homes and businesses of all
+							sizes. We promise to deliver
 							quality workmanship, clear
-							communication, and dependable
+							communication, and a dependable
 							service you can trust.
-						</h3>
+						</p>
+					</CopyContainer>
+					<CopyContainer>
+						<h3>Types of Services</h3>
 						<ul>
 							<Fade
 								cascade
@@ -48,18 +50,14 @@ const Body = () => {
 									Services
 								</li>
 								<li>
-									Lighting Installation
+									Installation
 									and Upgrades
 								</li>
 								<li>
-									Panel Upgrades and
-									Circuit Breaker
-									Replacement
+									Repair and Maintenance
 								</li>
 								<li>
-									Wiring for Renovations,
-									New Builds, and
-									Additions
+									Inspection and Testing
 								</li>
 							</Fade>
 						</ul>
@@ -104,9 +102,10 @@ const LeftSection = styled.div`
 const RightSection = styled.div`
 	flex: 0 0 65%;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	/* border: 1px solid #000000; */
+	flex-direction: column;
+	justify-content: space-evenly;
+	/* align-items: center; */
+	border: 1px solid #000000;
 
 	@media (max-width: 768px) {
 		width: 100%;
