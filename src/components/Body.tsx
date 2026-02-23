@@ -21,16 +21,25 @@ const Body = () => {
 					triggerOnce
 				>
 					<CopyContainer>
-						<h3>Our Mission</h3>
-						<p>
-							We strive to provide safe and
-							reliable electrical solutions
-							for homes and businesses of all
-							sizes. We promise to deliver
-							quality workmanship, clear
-							communication, and a dependable
-							service you can trust.
-						</p>
+						<Fade
+							cascade
+							damping={0.15}
+							delay={600}
+							triggerOnce
+						>
+							<h3>Our Mission</h3>
+							<p>
+								We strive to provide safe
+								and reliable electrical
+								solutions for homes and
+								businesses of all sizes. We
+								promise to deliver quality
+								workmanship, clear
+								communication, and a
+								dependable service you can
+								trust.
+							</p>
+						</Fade>
 					</CopyContainer>
 					<CopyContainer>
 						<h3>Types of Services</h3>
@@ -50,8 +59,8 @@ const Body = () => {
 									Services
 								</li>
 								<li>
-									Installation
-									and Upgrades
+									Installation and
+									Upgrades
 								</li>
 								<li>
 									Repair and Maintenance
@@ -105,7 +114,7 @@ const RightSection = styled.div`
 	flex-direction: column;
 	justify-content: space-evenly;
 	/* align-items: center; */
-	border: 1px solid #000000;
+	/* border: 1px solid #000000; */
 
 	@media (max-width: 768px) {
 		width: 100%;
