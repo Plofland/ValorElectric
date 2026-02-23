@@ -113,7 +113,7 @@ const RightSection = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	border: 1px solid #000000;
+	/* border: 1px solid #000000; */
 
 	@media (max-width: 768px) {
 		width: 100%;
