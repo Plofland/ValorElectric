@@ -68,11 +68,12 @@ const Footer = () => {
 					{/* Facebook (Clickable) */}
 					<ContactCard href="https://www.facebook.com/profile.php?id=61574838629616">
 						<IconContainer>
-							<FontAwesomeIcon icon={faSquareFacebook} />
+							<FontAwesomeIcon
+								icon={faSquareFacebook}
+							/>
 						</IconContainer>
 						<ContactText>
-							<h3>Mail Us</h3>
-							valorElectric@gmail.com
+							<h3>Facebook</h3>
 						</ContactText>
 					</ContactCard>
 				</Fade>
@@ -123,7 +124,7 @@ const ContactCard = styled.a`
 
 	@media (max-width: 768px) {
 		width: 100%;
-		max-width: 400px; 
+		max-width: 400px;
 		background-color: #faf7f5;
 		padding: 1rem;
 		margin: 0.75rem 0;
