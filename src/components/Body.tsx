@@ -41,7 +41,7 @@ const Body = () => {
 							</p>
 						</Fade>
 					</CopyContainer>
-					<CopyContainer>
+					<ServicesCopyContainer>
 						<h3>Types of Services</h3>
 						<ul>
 							<Fade
@@ -70,7 +70,7 @@ const Body = () => {
 								</li>
 							</Fade>
 						</ul>
-					</CopyContainer>
+					</ServicesCopyContainer>
 				</CenteredFade>
 			</RightSection>
 		</BodyContainer>
@@ -113,8 +113,7 @@ const RightSection = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	/* align-items: center; */
-	/* border: 1px solid #000000; */
+	border: 1px solid #000000;
 
 	@media (max-width: 768px) {
 		width: 100%;
@@ -149,6 +148,12 @@ const CopyContainer = styled.div`
 
 	@media (max-width: 768px) {
 		padding: 24px;
+	}
+`;
+
+const ServicesCopyContainer = styled(CopyContainer)`
+	@media (max-width: 768px) {
+		margin-top: 1.5rem;
 	}
 `;
 
