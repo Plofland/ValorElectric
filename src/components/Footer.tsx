@@ -15,7 +15,7 @@ const Footer = () => {
 					damping={0.15}
 					triggerOnce
 				>
-					{/* Find Us (Clickable) */}
+					{/* Find Us (should NOT Clickable) */}
 					<ContactCard
 						href="https://maps.google.com/?q=123+Fake+Street"
 						target="_blank"
@@ -27,12 +27,19 @@ const Footer = () => {
 							/>
 						</IconContainer>
 						<ContactText>
-							<h3>Find Us</h3>
-							123 Fake Street
+							<h3>Proud to Serve</h3>
+							<ul>
+								<li>Knightdate, NC</li>
+								<li>Raleigh, NC</li>
+								<li>Garner, NC</li>
+								<li>
+									and surrounding areas
+								</li>
+							</ul>
 						</ContactText>
 					</ContactCard>
 
-					{/* Phone Us (NOT Clickable) */}
+					{/* Phone Us (Clickable) */}
 					<ContactCard href="tel:5555555555">
 						<IconContainer>
 							<FontAwesomeIcon
@@ -68,6 +75,7 @@ export default Footer;
 const ContactContainer = styled.div`
 	display: flex;
 	justify-content: space-evenly;
+	align-items: center;
 	padding: 1rem 2rem;
 	margin: 1rem 0;
 
@@ -76,6 +84,13 @@ const ContactContainer = styled.div`
 
 	@media (max-width: 768px) {
 		flex-direction: column;
+		align-items: center;
+		/*  FORCE react-awesome-reveal's Fade wrapper divs to full width */
+		& > div {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
 	}
 `;
 
@@ -87,6 +102,7 @@ const ContactCard = styled.a`
 	text-decoration: none;
 	color: inherit;
 	cursor: pointer;
+	padding: 0 1rem;
 
 	/* border: 1px solid #000000; */
 
@@ -95,9 +111,11 @@ const ContactCard = styled.a`
 	}
 
 	@media (max-width: 768px) {
+		width: 100%;
+		max-width: 400px; 
 		background-color: #faf7f5;
 		padding: 1rem;
-		margin: 0.5rem 0;
+		margin: 0.75rem 0;
 		border-radius: 12px;
 		box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 	}
@@ -105,9 +123,9 @@ const ContactCard = styled.a`
 
 const IconContainer = styled.div`
 	display: flex;
+	flex: 0 0 80px;
 	align-items: center;
 	justify-content: center;
-	width: 25%;
 	font-size: 3rem;
 	color: #ff4c4c;
 `;
@@ -116,9 +134,10 @@ const ContactText = styled.div`
 	/* border: 1px solid #000000; */
 
 	display: flex;
+	flex: 1;
+	min-width: 0;
 	flex-direction: column;
 	justify-content: center;
-	width: 75%;
 	height: 100%;
 	padding: 1rem;
 `;
