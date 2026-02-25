@@ -13,12 +13,12 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     height: 100%;
   }
-
+  
   body {
     font-family: system-ui, sans-serif;
     background-color: #f2f6ff;
   }
-
+  
   #root {
     min-height: 100vh;
     width: 100%;
