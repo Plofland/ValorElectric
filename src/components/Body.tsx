@@ -85,6 +85,7 @@ const BodyContainer = styled.div`
 	min-height: 70vh;
 	background-color: #ffffff;
 	margin: 0;
+	font-size: 1.2rem;
 	box-shadow: 0 0px 30px rgba(0, 0, 0, 0.65);
 	/* border: 1px solid #000000; */
 
@@ -143,7 +144,7 @@ const CopyContainer = styled.div`
 	}
 
 	ul {
-		padding-left: 20px;
+		list-style-position: inside;
 	}
 
 	@media (max-width: 768px) {

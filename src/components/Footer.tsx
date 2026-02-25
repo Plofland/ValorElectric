@@ -152,4 +152,8 @@ const ContactText = styled.div`
 	justify-content: center;
 	height: 100%;
 	padding: 1rem;
+
+	ul {
+		list-style-position: inside;
+	}
 `;
