@@ -83,11 +83,13 @@ const BodyContainer = styled.div`
 	display: flex;
 	width: 100%;
 	min-height: 70vh;
-	background-color: #ffffff;
 	margin: 0;
 	font-size: 1.2rem;
 	box-shadow: 0 0px 30px rgba(0, 0, 0, 0.65);
 	/* border: 1px solid #000000; */
+
+	// Soft Neutral (Modern & Balanced)
+	background-color: #ececec;
 
 	@media (max-width: 768px) {
 		flex-direction: column;
@@ -130,7 +132,9 @@ const CenteredFade = styled(Fade)`
 `;
 
 const CopyContainer = styled.div`
-	background-color: #faf7f5;
+	// Soft Neutral (Modern & Balanced)
+	background-color: #f8fafc;
+
 	border-radius: 12px;
 	padding: 32px;
 	max-width: 600px;
