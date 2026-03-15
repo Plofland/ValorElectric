@@ -59,8 +59,8 @@ const Part3Container = styled.div`
 `;
 
 const LeftSection = styled.div`
-	flex: 0 0 35%;
 	display: flex;
+	flex: 0 0 50%;
 	justify-content: center;
 	align-items: center;
 	padding: 2rem;
@@ -73,8 +73,8 @@ const LeftSection = styled.div`
 `;
 
 const RightSection = styled.div`
-	flex: 0 0 65%;
 	display: flex;
+	flex: 0 0 50%;
 	flex-direction: column;
 	justify-content: space-evenly;
 	/* border: 1px solid #000000; */
@@ -127,8 +127,9 @@ const CopyContainer = styled.div`
 
 
 const Photo = styled.img`
-	max-width: 80%;
-	max-height: 80%;
+	max-width: 60%;
+	max-height: 60%;
 	object-fit: contain;
 	border-radius: 12px;
+	box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
 `;
