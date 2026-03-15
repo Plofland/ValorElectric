@@ -21,7 +21,7 @@ const BodyContainer = styled.div`
 	min-height: 70vh;
 	margin: 0;
 	font-size: 1.2rem;
-	box-shadow: 0 0px 30px rgba(0, 0, 0, 0.65);
+	box-shadow: 0 0px 20px rgba(0, 0, 0, 0.35);
 	/* border: 1px solid #000000; */
 
 	// Soft Neutral (Modern & Balanced)
