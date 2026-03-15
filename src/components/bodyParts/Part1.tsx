@@ -49,13 +49,13 @@ const Part1 = () => {
 export default Part1;
 
 const Part1Container = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: center;
+	display: flex;
+	width: 100%;
+	align-items: center;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
 `;
 
 const LeftSection = styled.div`
@@ -64,7 +64,7 @@ const LeftSection = styled.div`
 	justify-content: center;
 	align-items: center;
 	padding: 2rem;
-	/* border: 1px solid #000000; */
+	border: 1px solid #000000;
 
 	@media (max-width: 768px) {
 		width: 100%;
@@ -77,7 +77,7 @@ const RightSection = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	/* border: 1px solid #000000; */
+	border: 1px solid #000000;
 
 	@media (max-width: 768px) {
 		width: 100%;
@@ -100,27 +100,34 @@ const CopyContainer = styled.div`
 	max-width: 600px;
 	width: 100%;
 	box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
-    
+
 	h3,
 	ul {
-        margin: 0 0 15px 0;
+		margin: 0 0 15px 0;
 		text-align: left;
 	}
-    
-	ul {
-        list-style-position: inside;
-	}
-    
-	@media (max-width: 768px) {
-        padding: 24px;
-	}
-    `;
 
+	ul {
+		list-style-position: inside;
+	}
+
+	p {
+		line-height: 1.5;
+	}
+
+	@media (max-width: 768px) {
+		padding: 24px;
+
+		p {
+			line-height: 1;
+		}
+	}
+`;
 
 const Photo = styled.img`
 	max-width: 60%;
 	max-height: 60%;
 	object-fit: contain;
 	border-radius: 12px;
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
+	box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
 `;

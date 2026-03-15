@@ -112,8 +112,16 @@ const CopyContainer = styled.div`
 		list-style-position: inside;
 	}
 
+	p {
+		line-height: 1.5;
+	}
+
 	@media (max-width: 768px) {
 		padding: 24px;
+
+		p {
+		line-height: 1;
+	}
 	}
 `;
 
