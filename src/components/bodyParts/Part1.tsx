@@ -1,0 +1,153 @@
+import styled from 'styled-components';
+import { Fade } from 'react-awesome-reveal';
+
+const Part1 = () => {
+	return (
+		<>
+			<LeftSection>
+				<CenteredFade direction="left" triggerOnce>
+					<Portrait
+						src="/andrewSideView.jpeg"
+						alt="Side profile portrait of Andrew the electrician as he works on an electrical outlet"
+					/>
+				</CenteredFade>
+			</LeftSection>
+			<RightSection>
+				<CenteredFade
+					cascade
+					direction="right"
+					damping={0.15}
+					triggerOnce
+				>
+					<CopyContainer>
+						<Fade
+							cascade
+							damping={0.15}
+							delay={600}
+							triggerOnce
+						>
+							<h3>Our Mission</h3>
+							<p>
+								We strive to provide safe
+								and reliable electrical
+								solutions for homes and
+								businesses of all sizes. We
+								promise to deliver quality
+								workmanship, clear
+								communication, and a
+								dependable service you can
+								trust.
+							</p>
+						</Fade>
+					</CopyContainer>
+					<ServicesCopyContainer>
+						<h3>Types of Services</h3>
+						<ul>
+							<Fade
+								cascade
+								damping={0.15}
+								delay={600}
+								triggerOnce
+							>
+								<li>
+									Residential Electrical
+									Services
+								</li>
+								<li>
+									Commercial Electrical
+									Services
+								</li>
+								<li>
+									Installation and
+									Upgrades
+								</li>
+								<li>
+									Repair and Maintenance
+								</li>
+								<li>
+									Inspection and Testing
+								</li>
+							</Fade>
+						</ul>
+					</ServicesCopyContainer>
+				</CenteredFade>
+			</RightSection>
+		</>
+	);
+};
+
+export default Part1;
+
+
+
+const LeftSection = styled.div`
+	flex: 0 0 35%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	/* border: 1px solid #000000; */
+
+	@media (max-width: 768px) {
+		width: 100%;
+		padding: 1rem 0;
+	}
+`;
+
+const RightSection = styled.div`
+	flex: 0 0 65%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	/* border: 1px solid #000000; */
+
+	@media (max-width: 768px) {
+		width: 100%;
+		padding: 1rem 0;
+	}
+`;
+
+const CenteredFade = styled(Fade)`
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;
+
+const CopyContainer = styled.div`
+	// Soft Neutral (Modern & Balanced)
+	background-color: #f8fafc;
+
+	border-radius: 12px;
+	padding: 32px;
+	max-width: 600px;
+	width: 100%;
+	box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
+
+	h3,
+	ul {
+		margin: 0 0 15px 0;
+		text-align: left;
+	}
+
+	ul {
+		list-style-position: inside;
+	}
+
+	@media (max-width: 768px) {
+		padding: 24px;
+	}
+`;
+
+const ServicesCopyContainer = styled(CopyContainer)`
+	@media (max-width: 768px) {
+		margin-top: 1.5rem;
+	}
+`;
+
+const Portrait = styled.img`
+	max-width: 80%;
+	max-height: 80%;
+	object-fit: contain;
+	border-radius: 12px;
+`;

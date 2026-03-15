@@ -16,6 +16,9 @@ export const GlobalStyles = createGlobalStyle`
   
   body {
     font-family: system-ui, sans-serif;
+
+    // look into the light-dark() CCS function
+    // note, it will need "color-scheme: light dark;" in order to work
     
     // Soft Neutral (Modern & Balanced)
     background-color: #f6f6f6;
