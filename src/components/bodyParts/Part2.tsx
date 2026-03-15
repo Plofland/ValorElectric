@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import { Fade } from 'react-awesome-reveal';
 
-const Part1 = () => {
+const Part2 = () => {
 	return (
-		<Part1Container>
-			<LeftSection>
+                <Part2Container>
+        <LeftSection>
 				<CenteredFade direction="left" triggerOnce>
 					<Portrait
 						src="/andrewSideView.jpeg"
@@ -72,13 +72,13 @@ const Part1 = () => {
 					</ServicesCopyContainer>
 				</CenteredFade>
 			</RightSection>
-		</Part1Container>
+		</Part2Container>
 	);
 };
 
-export default Part1;
+export default Part2;
 
-const Part1Container = styled.div`
+const Part2Container = styled.div`
   display: flex;
   width: 100%;
   align-items: center;

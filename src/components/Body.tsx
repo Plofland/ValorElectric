@@ -1,9 +1,13 @@
 import styled from 'styled-components';
-import Part1 from './bodyParts/part1';
+import Part1 from './bodyParts/Part1';
+import Part2 from './bodyParts/Part2';
+import Part3 from './bodyParts/Part3';
 const Body = () => {
 	return (
 		<BodyContainer>
 			<Part1 />
+			<Part2 />
+			<Part3 />
 		</BodyContainer>
 	);
 };
@@ -12,6 +16,7 @@ export default Body;
 
 const BodyContainer = styled.div`
 	display: flex;
+	flex-direction: column;
 	width: 100%;
 	min-height: 70vh;
 	margin: 0;
@@ -23,7 +28,6 @@ const BodyContainer = styled.div`
 	background-color: #ececec;
 
 	@media (max-width: 768px) {
-		flex-direction: column;
 		padding: 1rem;
 	}
 `;
