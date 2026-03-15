@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import electricianPortrait from '/david-cain-TVPI5pHpNFw-unsplash.jpg';
 import { Fade } from 'react-awesome-reveal';
 
 const Body = () => {
@@ -8,8 +7,8 @@ const Body = () => {
 			<LeftSection>
 				<CenteredFade direction="left" triggerOnce>
 					<Portrait
-						src={electricianPortrait}
-						alt="Portrait of an electrician"
+						src="/andrewSideView.jpeg"
+						alt="Side profile portrait of Andrew the electrician as he works on an electrical outlet"
 					/>
 				</CenteredFade>
 			</LeftSection>
