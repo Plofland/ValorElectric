@@ -3,43 +3,14 @@ import { Fade } from 'react-awesome-reveal';
 
 const Part2 = () => {
 	return (
-                <Part2Container>
-        <LeftSection>
-				<CenteredFade direction="left" triggerOnce>
-					<Portrait
-						src="/andrewSideView.jpeg"
-						alt="Side profile portrait of Andrew the electrician as he works on an electrical outlet"
-					/>
-				</CenteredFade>
-			</LeftSection>
-			<RightSection>
+		<Part2Container>
+			<LeftSection>
 				<CenteredFade
 					cascade
 					direction="right"
 					damping={0.15}
 					triggerOnce
 				>
-					<CopyContainer>
-						<Fade
-							cascade
-							damping={0.15}
-							delay={600}
-							triggerOnce
-						>
-							<h3>Our Mission</h3>
-							<p>
-								We strive to provide safe
-								and reliable electrical
-								solutions for homes and
-								businesses of all sizes. We
-								promise to deliver quality
-								workmanship, clear
-								communication, and a
-								dependable service you can
-								trust.
-							</p>
-						</Fade>
-					</CopyContainer>
 					<ServicesCopyContainer>
 						<h3>Types of Services</h3>
 						<ul>
@@ -71,6 +42,14 @@ const Part2 = () => {
 						</ul>
 					</ServicesCopyContainer>
 				</CenteredFade>
+			</LeftSection>
+            <RightSection>
+				<CenteredFade direction="left" triggerOnce>
+					<Photo
+						src="/fuseBox.jpeg"
+						alt="Before image of a fuse box containing fuses"
+					/>
+				</CenteredFade>
 			</RightSection>
 		</Part2Container>
 	);
@@ -79,16 +58,17 @@ const Part2 = () => {
 export default Part2;
 
 const Part2Container = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: center;
+	display: flex;
+	width: 100%;
+	align-items: center;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
 `;
 
-const LeftSection = styled.div`
+// this could have the two images of the fuse box overlapping
+const RightSection = styled.div`
 	flex: 0 0 35%;
 	display: flex;
 	justify-content: center;
@@ -102,7 +82,7 @@ const LeftSection = styled.div`
 	}
 `;
 
-const RightSection = styled.div`
+const LeftSection = styled.div`
 	flex: 0 0 65%;
 	display: flex;
 	flex-direction: column;
@@ -153,7 +133,7 @@ const ServicesCopyContainer = styled(CopyContainer)`
 	}
 `;
 
-const Portrait = styled.img`
+const Photo = styled.img`
 	max-width: 80%;
 	max-height: 80%;
 	object-fit: contain;

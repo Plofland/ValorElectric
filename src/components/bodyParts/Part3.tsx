@@ -6,9 +6,9 @@ const Part3 = () => {
 		<Part3Container>
 			<LeftSection>
 				<CenteredFade direction="left" triggerOnce>
-					<Portrait
-						src="/andrewSideView.jpeg"
-						alt="Side profile portrait of Andrew the electrician as he works on an electrical outlet"
+					<Photo
+						src="/scissorLift.jpeg"
+						alt="A fully extended scissor lift being used to access and repair a light in a warehouse"
 					/>
 				</CenteredFade>
 			</LeftSection>
@@ -40,36 +40,6 @@ const Part3 = () => {
 							</p>
 						</Fade>
 					</CopyContainer>
-					<ServicesCopyContainer>
-						<h3>Types of Services</h3>
-						<ul>
-							<Fade
-								cascade
-								damping={0.15}
-								delay={600}
-								triggerOnce
-							>
-								<li>
-									Residential Electrical
-									Services
-								</li>
-								<li>
-									Commercial Electrical
-									Services
-								</li>
-								<li>
-									Installation and
-									Upgrades
-								</li>
-								<li>
-									Repair and Maintenance
-								</li>
-								<li>
-									Inspection and Testing
-								</li>
-							</Fade>
-						</ul>
-					</ServicesCopyContainer>
 				</CenteredFade>
 			</RightSection>
 		</Part3Container>
@@ -147,13 +117,8 @@ const CopyContainer = styled.div`
 	}
 `;
 
-const ServicesCopyContainer = styled(CopyContainer)`
-	@media (max-width: 768px) {
-		margin-top: 1.5rem;
-	}
-`;
 
-const Portrait = styled.img`
+const Photo = styled.img`
 	max-width: 80%;
 	max-height: 80%;
 	object-fit: contain;

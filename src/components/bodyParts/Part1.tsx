@@ -6,7 +6,7 @@ const Part1 = () => {
 		<Part1Container>
 			<LeftSection>
 				<CenteredFade direction="left" triggerOnce>
-					<Portrait
+					<Photo
 						src="/andrewSideView.jpeg"
 						alt="Side profile portrait of Andrew the electrician as he works on an electrical outlet"
 					/>
@@ -40,36 +40,6 @@ const Part1 = () => {
 							</p>
 						</Fade>
 					</CopyContainer>
-					<ServicesCopyContainer>
-						<h3>Types of Services</h3>
-						<ul>
-							<Fade
-								cascade
-								damping={0.15}
-								delay={600}
-								triggerOnce
-							>
-								<li>
-									Residential Electrical
-									Services
-								</li>
-								<li>
-									Commercial Electrical
-									Services
-								</li>
-								<li>
-									Installation and
-									Upgrades
-								</li>
-								<li>
-									Repair and Maintenance
-								</li>
-								<li>
-									Inspection and Testing
-								</li>
-							</Fade>
-						</ul>
-					</ServicesCopyContainer>
 				</CenteredFade>
 			</RightSection>
 		</Part1Container>
@@ -89,8 +59,8 @@ const Part1Container = styled.div`
 `;
 
 const LeftSection = styled.div`
-	flex: 0 0 35%;
 	display: flex;
+	flex: 0 0 50%;
 	justify-content: center;
 	align-items: center;
 	padding: 2rem;
@@ -103,7 +73,7 @@ const LeftSection = styled.div`
 `;
 
 const RightSection = styled.div`
-	flex: 0 0 65%;
+	flex: 0 0 50%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -125,37 +95,32 @@ const CenteredFade = styled(Fade)`
 const CopyContainer = styled.div`
 	// Soft Neutral (Modern & Balanced)
 	background-color: #f8fafc;
-
 	border-radius: 12px;
 	padding: 32px;
 	max-width: 600px;
 	width: 100%;
 	box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
-
+    
 	h3,
 	ul {
-		margin: 0 0 15px 0;
+        margin: 0 0 15px 0;
 		text-align: left;
 	}
-
+    
 	ul {
-		list-style-position: inside;
+        list-style-position: inside;
 	}
-
+    
 	@media (max-width: 768px) {
-		padding: 24px;
+        padding: 24px;
 	}
-`;
+    `;
 
-const ServicesCopyContainer = styled(CopyContainer)`
-	@media (max-width: 768px) {
-		margin-top: 1.5rem;
-	}
-`;
 
-const Portrait = styled.img`
-	max-width: 80%;
-	max-height: 80%;
+const Photo = styled.img`
+	max-width: 60%;
+	max-height: 60%;
 	object-fit: contain;
 	border-radius: 12px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
 `;
