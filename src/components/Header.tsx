@@ -32,13 +32,39 @@ const HeaderContainer = styled.header`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1rem 4rem;
+	padding: 0 3rem;
 
+	/* border: 1px solid #000000; */
+	
 	/* Mobile: stack items */
 	@media (max-width: 768px) {
 		flex-direction: column;
 		align-items: center;
 		padding: 1rem 2rem;
+	}
+	`;
+
+const LogoContainer = styled.div`
+	display: flex;
+	justify-content: flex-end;
+	
+	/* border: 1px solid #000000; */
+
+	@media (max-width: 768px) {
+		margin-top: 1rem;
+		justify-content: center;
+		padding-left: 1rem;
+	}
+`;
+
+const ValorElectricLogo = styled.img`
+	width: 140px;
+	height: 140px;
+	object-fit: contain;
+
+	@media (max-width: 768px) {
+		width: 100px;
+		height: 100px;
 	}
 `;
 
@@ -49,8 +75,10 @@ const CompanyContainer = styled.div`
 	gap: 0.75rem;
 	cursor: pointer;
 
+	/* border: 1px solid #000000; */
+
 	svg {
-		font-size: 2.5rem;  /* match h1 font-size */
+		font-size: 2.5rem; /* match h1 font-size */
 		line-height: 1;
 		color: #000000;
 		padding: 0.25rem;
@@ -81,7 +109,6 @@ const TitleContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 
-	/* Check the border of the container */
 	/* border: 1px solid #000000; */
 
 	h1 {
@@ -177,7 +204,6 @@ const TitleContainer = styled.div`
 			color: #fff8d1; /* Keep yellow center after flicker */
 		}
 	}
-
 
 	/* Bulb flicker animation */
 	@keyframes bulb-flicker {
@@ -317,27 +343,5 @@ const TitleContainer = styled.div`
 				drop-shadow(0 0 6px #ff0000)
 				drop-shadow(0 0 10px #0038ff);
 		}
-	}
-`;
-
-const LogoContainer = styled.div`
-	display: flex;
-	justify-content: flex-end;
-
-	@media (max-width: 768px) {
-		margin-top: 1rem;
-		justify-content: center;
-		padding-left: 1rem;
-	}
-`;
-
-const ValorElectricLogo = styled.img`
-	width: 140px;
-	height: 140px;
-	object-fit: contain;
-
-	@media (max-width: 768px) {
-		width: 100px;
-		height: 100px;
 	}
 `;

@@ -64,7 +64,8 @@ const LeftSection = styled.div`
 	justify-content: center;
 	align-items: center;
 	padding: 2rem;
-	border: 1px solid #000000;
+
+	/* border: 1px solid #000000; */
 
 	@media (max-width: 768px) {
 		width: 100%;
@@ -77,7 +78,8 @@ const RightSection = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	border: 1px solid #000000;
+
+	/* border: 1px solid #000000; */
 
 	@media (max-width: 768px) {
 		width: 100%;
