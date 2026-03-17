@@ -53,7 +53,7 @@ const ContactContainer = styled.div`
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	padding: 1rem 2rem;
+	padding: 0rem 2rem 1rem 2rem;
 	margin: 1rem 0;
 
 	/* Check the border of the container */
