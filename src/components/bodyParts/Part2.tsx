@@ -75,9 +75,8 @@ export default Part2;
 const Part2Container = styled.div`
     display: flex;
     width: 100%;
-    align-items: center;
 	min-height: 60vh;
-	
+    align-items: center;
     @media (max-width: 768px) {
         flex-direction: column;
     }
@@ -88,7 +87,7 @@ const RightSection = styled.div`
     flex: 0 0 50%;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 1.5rem;
     @media (max-width: 768px) {
         width: 100%;
         padding: 1rem 0;
@@ -168,8 +167,8 @@ const ArrowBadge = styled.div`
 const CopyContainer = styled.div`
     background-color: #f8fafc;
     border-radius: 12px;
-    padding: 32px;
-    max-width: 600px;
+    padding: 24px 28px;
+    max-width: 340px;
     width: 100%;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
     h3,
@@ -199,7 +198,7 @@ const ServicesCopyContainer = styled(CopyContainer)`
 
 const Photo = styled.img`
     width: 100%;
-    max-width: 220px;
+    max-width: 280px;
     aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 12px;
@@ -212,6 +211,6 @@ const Photo = styled.img`
     }
 
     @media (max-width: 768px) {
-        max-width: 140px;
+        max-width: 160px;
     }
 `;

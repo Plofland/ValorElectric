@@ -71,7 +71,7 @@ const LeftSection = styled.div`
     flex: 0 0 50%;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 1.5rem;
     @media (max-width: 768px) {
         width: 100%;
         padding: 1rem 0;
@@ -101,12 +101,12 @@ const MosaicGrid = styled.div`
     display: flex;
     gap: 8px;
     width: 100%;
-    max-width: 480px;
+    max-width: 540px;
     /* Fixed height so both columns share the same vertical space */
-    height: 380px;
+    height: 420px;
 
     @media (max-width: 768px) {
-        height: 260px;
+        height: 280px;
         max-width: 100%;
     }
 `;
@@ -151,8 +151,8 @@ const StackedPhoto = styled.img`
 const CopyContainer = styled.div`
     background-color: #f8fafc;
     border-radius: 12px;
-    padding: 32px;
-    max-width: 600px;
+    padding: 24px 28px;
+    max-width: 340px;
     width: 100%;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
     h3,
