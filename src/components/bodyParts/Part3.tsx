@@ -20,24 +20,14 @@ const Part3 = () => {
 					triggerOnce
 				>
 					<CopyContainer>
-						<Fade
-							cascade
-							damping={0.15}
-							delay={600}
-							triggerOnce
-						>
-							<h3>Our Mission</h3>
-							<p>
-								We strive to provide safe
-								and reliable electrical
-								solutions for homes and
-								businesses of all sizes. We
-								promise to deliver quality
-								workmanship, clear
-								communication, and a
-								dependable service you can
-								trust.
-							</p>
+						<Fade cascade damping={0.15} delay={600} triggerOnce>
+							<h3>Proud to Serve</h3>
+							<ul>
+								<li>Knightdate, NC</li>
+								<li>Raleigh, NC</li>
+								<li>Garner, NC</li>
+								<li>and surrounding areas</li>
+							</ul>
 						</Fade>
 					</CopyContainer>
 				</CenteredFade>
@@ -49,13 +39,13 @@ const Part3 = () => {
 export default Part3;
 
 const Part3Container = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: center;
+	display: flex;
+	width: 100%;
+	align-items: center;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
 `;
 
 const LeftSection = styled.div`
@@ -120,11 +110,10 @@ const CopyContainer = styled.div`
 		padding: 24px;
 
 		p {
-		line-height: 1;
-	}
+			line-height: 1;
+		}
 	}
 `;
-
 
 const Photo = styled.img`
 	max-width: 60%;

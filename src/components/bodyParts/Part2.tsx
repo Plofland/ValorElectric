@@ -79,6 +79,7 @@ const Part2Container = styled.div`
     @media (max-width: 768px) {
         flex-direction: column;
     }
+	min-height: 70vh;
 `;
 
 const RightSection = styled.div`
