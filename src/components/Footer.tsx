@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faSquareFacebook } from '@fortawesome/free-brands-svg-icons';
