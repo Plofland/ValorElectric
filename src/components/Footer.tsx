@@ -10,42 +10,11 @@ const Footer = () => {
 	return (
 		<>
 			<ContactContainer>
-				<Fade
-					direction="up"
-					cascade
-					damping={0.15}
-					triggerOnce
-				>
-					{/* Find Us (should NOT Clickable) */}
-					<ContactCard
-						href="https://maps.google.com/?q=123+Fake+Street"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<IconContainer>
-							<FontAwesomeIcon
-								icon={faLocationDot}
-							/>
-						</IconContainer>
-						<ContactText>
-							<h3>Proud to Serve</h3>
-							<ul>
-								<li>Knightdate, NC</li>
-								<li>Raleigh, NC</li>
-								<li>Garner, NC</li>
-								<li>
-									and surrounding areas
-								</li>
-							</ul>
-						</ContactText>
-					</ContactCard>
-
+				<Fade direction="up" cascade damping={0.15} triggerOnce>
 					{/* Phone Us (Clickable) */}
 					<ContactCard href="tel:5555555555">
 						<IconContainer>
-							<FontAwesomeIcon
-								icon={faPhone}
-							/>
+							<FontAwesomeIcon icon={faPhone} />
 						</IconContainer>
 						<ContactText>
 							<h3>Call Us</h3>
@@ -56,9 +25,7 @@ const Footer = () => {
 					{/* Mail Us (Clickable) */}
 					<ContactCard href="mailto:valorElectric@gmail.com">
 						<IconContainer>
-							<FontAwesomeIcon
-								icon={faEnvelope}
-							/>
+							<FontAwesomeIcon icon={faEnvelope} />
 						</IconContainer>
 						<ContactText>
 							<h3>Mail Us</h3>
@@ -68,9 +35,7 @@ const Footer = () => {
 					{/* Facebook (Clickable) */}
 					<ContactCard href="https://www.facebook.com/profile.php?id=61574838629616">
 						<IconContainer>
-							<FontAwesomeIcon
-								icon={faSquareFacebook}
-							/>
+							<FontAwesomeIcon icon={faSquareFacebook} />
 						</IconContainer>
 						<ContactText>
 							<h3>Facebook</h3>
