@@ -82,6 +82,11 @@ const CompanyContainer = styled.div`
 		line-height: 1;
 		color: #000000;
 		padding: 0.25rem;
+
+		/* Hide lightbulb icon on mobile */
+		@media (max-width: 768px) {
+			display: none;
+		}
 	}
 
 	/* Trigger flicker on BOTH icon + text */
@@ -122,6 +127,7 @@ const TitleContainer = styled.div`
 		color: #000000;
 
 		@media (max-width: 768px) {
+			font-size: 1.75rem;
 			text-align: center;
 		}
 
