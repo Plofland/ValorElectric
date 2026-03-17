@@ -76,10 +76,11 @@ const Part2Container = styled.div`
     display: flex;
     width: 100%;
     align-items: center;
+	min-height: 60vh;
+	
     @media (max-width: 768px) {
         flex-direction: column;
     }
-	min-height: 70vh;
 `;
 
 const RightSection = styled.div`
@@ -203,6 +204,12 @@ const Photo = styled.img`
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
+    transition: transform 0.35s ease, filter 0.35s ease;
+
+    &:hover {
+        transform: scale(1.03);
+        filter: brightness(1.08);
+    }
 
     @media (max-width: 768px) {
         max-width: 140px;
