@@ -32,40 +32,45 @@ const Part1 = () => {
 						</Fade>
 					</MissionCopyContainer>
 					<BottomCardsRow>
-						<ServicesCopyContainer>
-							<h3>Types of Services</h3>
-							<ul>
+						<CardFade direction="up" delay={900} triggerOnce>
+							<ServicesCopyContainer>
+								<h3>Types of Services</h3>
+								<ul>
+									<Fade
+										cascade
+										damping={0.15}
+										direction="down"
+										delay={600}
+										triggerOnce
+									>
+										<li>Residential Electrical Services</li>
+										<li>Commercial Electrical Services</li>
+										<li>Installation and Upgrades</li>
+										<li>Repair and Maintenance</li>
+										<li>Inspection and Testing</li>
+									</Fade>
+								</ul>
+							</ServicesCopyContainer>
+						</CardFade>
+						<CardFade direction="up" delay={1150} triggerOnce>
+							<RegionCopyContainer>
 								<Fade
 									cascade
 									damping={0.15}
-									delay={600}
+									delay={850}
 									triggerOnce
 								>
-									<li>Residential Electrical Services</li>
-									<li>Commercial Electrical Services</li>
-									<li>Installation and Upgrades</li>
-									<li>Repair and Maintenance</li>
-									<li>Inspection and Testing</li>
+									<h3>Proud to Serve</h3>
+									<ul>
+										<li>Knightdale, NC</li>
+										<li>Raleigh, NC</li>
+										<li>Garner, NC</li>
+										<li>and surrounding areas</li>
+									</ul>
 								</Fade>
-							</ul>
-						</ServicesCopyContainer>
-						<RegionCopyContainer>
-							<Fade
-								cascade
-								damping={0.15}
-								delay={600}
-								triggerOnce
-							>
-								<h3>Proud to Serve</h3>
-								<ul>
-									<li>Knightdale, NC</li>
-									<li>Raleigh, NC</li>
-									<li>Garner, NC</li>
-									<li>and surrounding areas</li>
-								</ul>
-							</Fade>
-						</RegionCopyContainer>
-					</BottomCardsRow>
+							</RegionCopyContainer>
+						</CardFade>
+					</BottomCardsRow>{' '}
 				</CenteredFade>
 			</RightSection>
 		</Part1Container>
@@ -79,7 +84,7 @@ const Part1Container = styled.div`
 	width: 100%;
 	align-items: center;
 	padding: 2rem;
-	
+
 	@media (max-width: 768px) {
 		flex-direction: column;
 		padding: 1rem;
@@ -147,7 +152,16 @@ const MissionCopyContainer = styled.div`
 	}
 `;
 
-/* New wrapper that matches MissionCopyContainer's max-width */
+const Photo = styled.img`
+	width: 100%;
+	max-width: 420px;
+	height: auto;
+	max-height: 600px;
+	object-fit: cover;
+	object-position: center top;
+	border-radius: 12px;
+	box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
+`;
 const BottomCardsRow = styled.div`
 	display: flex;
 	flex-direction: row;
@@ -160,15 +174,14 @@ const BottomCardsRow = styled.div`
 	}
 `;
 
-const Photo = styled.img`
-	width: 100%;
-	max-width: 420px;
-	height: auto;
-	max-height: 600px;
-	object-fit: cover;
-	object-position: center top;
-	border-radius: 12px;
-	box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
+const CardFade = styled(Fade)`
+	flex: 1;
+	width: 0;
+	display: flex;
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 
 const CopyContainer = styled.div`
@@ -176,7 +189,6 @@ const CopyContainer = styled.div`
 	border-radius: 12px;
 	padding: 24px 28px;
 	flex: 1;
-	width: 0;
 	display: flex;
 	flex-direction: column;
 	box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
