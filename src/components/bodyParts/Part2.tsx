@@ -4,27 +4,33 @@ import { Fade } from 'react-awesome-reveal';
 const Part2 = () => {
 	return (
 		<Part2Container>
-			<CenteredFade direction="left" triggerOnce>
-				<BeforeAfterContainer>
-					<PhotoWrapper>
-						<Photo
-							src="/fuseBox.jpeg"
-							alt="Before image of a fuse box containing fuses"
-						/>
-					</PhotoWrapper>
-
-					<ArrowBadge>
-						<i className="fa-solid fa-arrow-right" />
-					</ArrowBadge>
-
-					<PhotoWrapper>
-						<Photo
-							src="/fuseBoxAfter.jpeg"
-							alt="After image of a modern circuit breaker panel"
-						/>
-					</PhotoWrapper>
-				</BeforeAfterContainer>
-			</CenteredFade>
+			<LeftSection>
+				<CenteredFade direction="left" triggerOnce>
+					<BeforeAfterContainer>
+						<PhotoWrapper>
+							<Photo
+								src="/fuseBox.jpeg"
+								alt="Before image of a fuse box containing fuses"
+							/>
+						</PhotoWrapper>
+					</BeforeAfterContainer>
+				</CenteredFade>
+			</LeftSection>
+			<ArrowBadge>
+				<i className="fa-solid fa-arrow-right" />
+			</ArrowBadge>
+			<RightSection>
+				<CenteredFade direction="left" triggerOnce>
+					<BeforeAfterContainer>
+						<PhotoWrapper>
+							<Photo
+								src="/fuseBoxAfter.jpeg"
+								alt="After image of a modern circuit breaker panel"
+							/>
+						</PhotoWrapper>
+					</BeforeAfterContainer>
+				</CenteredFade>
+			</RightSection>
 		</Part2Container>
 	);
 };
@@ -33,12 +39,18 @@ export default Part2;
 
 const Part2Container = styled.div`
 	display: flex;
+	flex-direction: row;
 	width: 100%;
 	min-height: 60vh;
 	align-items: center;
-	@media (max-width: 768px) {
-		flex-direction: column;
-	}
+`;
+
+const LeftSection = styled.div`
+	flex: 0 0 calc(50% - 1rem);
+`;
+
+const RightSection = styled.div`
+	flex: 0 0 calc(50% - 1rem);
 `;
 
 const CenteredFade = styled(Fade)`
@@ -103,7 +115,7 @@ const ArrowBadge = styled.div`
 const Photo = styled.img`
 	width: 100%;
 	max-width: 280px;
-	aspect-ratio: 4 / 3;
+	aspect-ratio: 4 / 4;
 	object-fit: cover;
 	border-radius: 12px;
 	box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
