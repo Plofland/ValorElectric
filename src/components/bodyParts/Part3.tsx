@@ -38,16 +38,16 @@ const Part3Container = styled.div`
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	min-height: 60vh;
+	padding: 4rem 0;
 	align-items: center;
 	justify-content: center;
 	gap: 1.5rem;
 `;
 
 const CenteredFade = styled(Fade)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
 
 /* Holds both photos + the arrow in a row */

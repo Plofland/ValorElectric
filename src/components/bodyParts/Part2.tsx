@@ -42,25 +42,12 @@ const Part2 = () => {
 };
 export default Part2;
 
-const photoBase = css`
-	border-radius: 10px;
-	box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
-	object-fit: cover;
-	transition:
-		transform 0.35s ease,
-		filter 0.35s ease;
-	&:hover {
-		transform: scale(1.03);
-		filter: brightness(1.08);
-	}
-`;
-
 const Part2Container = styled.div`
 	display: flex;
 	width: 100%;
 	justify-content: center;
 	align-items: center;
-	padding: 2rem;
+	padding: 4rem 2rem;
 
 	@media (max-width: 768px) {
 		padding: 1rem;
@@ -82,6 +69,19 @@ const MosaicGrid = styled.div`
 
 	@media (max-width: 768px) {
 		height: 300px;
+	}
+`;
+
+const photoBase = css`
+	border-radius: 10px;
+	box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
+	object-fit: cover;
+	transition:
+		transform 0.35s ease,
+		filter 0.35s ease;
+	&:hover {
+		transform: scale(1.03);
+		filter: brightness(1.08);
 	}
 `;
 
