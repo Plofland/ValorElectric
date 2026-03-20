@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Part1 from './bodyParts/Part1';
 import Part2 from './bodyParts/Part2';
 import Part3 from './bodyParts/Part3';
+
 const Body = () => {
 	return (
 		<BodyContainer>
