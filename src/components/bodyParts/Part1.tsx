@@ -117,6 +117,7 @@ const CenteredFade = styled(Fade)`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	/* gap: 1.5rem; */
 `;
 
 const MissionCopyContainer = styled.div`

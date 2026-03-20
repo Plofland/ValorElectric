@@ -31,26 +31,6 @@ const Part3 = () => {
                     </MosaicGrid>
                 </CenteredFade>
             </LeftSection>
-            <RightSection>
-                <CenteredFade
-                    cascade
-                    direction="right"
-                    damping={0.15}
-                    triggerOnce
-                >
-                    <CopyContainer>
-                        <Fade cascade damping={0.15} delay={600} triggerOnce>
-                            <h3>Proud to Serve</h3>
-                            <ul>
-                                <li>Knightdale, NC</li>
-                                <li>Raleigh, NC</li>
-                                <li>Garner, NC</li>
-                                <li>and surrounding areas</li>
-                            </ul>
-                        </Fade>
-                    </CopyContainer>
-                </CenteredFade>
-            </RightSection>
         </Part3Container>
     );
 };
@@ -78,16 +58,6 @@ const LeftSection = styled.div`
     }
 `;
 
-const RightSection = styled.div`
-    display: flex;
-    flex: 0 0 50%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    @media (max-width: 768px) {
-        width: 100%;
-        padding: 1rem 0;
-    }
-`;
 
 const CenteredFade = styled(Fade)`
     width: 100%;
@@ -146,30 +116,4 @@ const StackedPhoto = styled.img`
     width: 100%;
     flex: 1;
     min-height: 0; /* critical: lets flex children shrink inside a fixed-height parent */
-`;
-
-const CopyContainer = styled.div`
-    background-color: #f8fafc;
-    border-radius: 12px;
-    padding: 24px 28px;
-    max-width: 340px;
-    width: 100%;
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
-    h3,
-    ul {
-        margin: 0 0 15px 0;
-        text-align: left;
-    }
-    ul {
-        list-style-position: inside;
-    }
-    p {
-        line-height: 1.5;
-    }
-    @media (max-width: 768px) {
-        padding: 24px;
-        p {
-            line-height: 1;
-        }
-    }
 `;
