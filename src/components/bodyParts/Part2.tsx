@@ -1,42 +1,57 @@
 import styled, { css } from 'styled-components';
 import { Fade } from 'react-awesome-reveal';
+import ImageCarousel from '../ImageCarousel';
 
 const Part2 = () => {
+	const images = [
+		{
+			src: '/scissorLift.jpeg',
+			alt: 'A fully extended scissor lift being used to access and repair a light in a warehouse'
+		},
+		{ src: '/ceilingFan.jpeg', alt: 'A ceiling fan installation' },
+		{ src: '/litLivingRoom.jpeg', alt: 'A beautifully lit living room' },
+		{ src: '/andrewSideView.jpeg', alt: 'Electrician working on site' }
+	];
 	return (
 		<Part2Container>
-			<CenteredFade direction="up" triggerOnce>
-				<MosaicGrid>
-					<Fade direction="left" triggerOnce delay={300}>
-						<TallPhoto
-							src="/scissorLift.jpeg"
-							alt="A fully extended scissor lift being used to access and repair a light in a warehouse"
-						/>
-					</Fade>
-					<MiddleColumn>
-						<MiddleFade
-							cascade
-							damping={0.4}
-							direction="up"
-							triggerOnce
-						>
-							<MiddlePhoto
-								src="/ceilingFan.jpeg"
-								alt="A ceiling fan installation"
+			<MobileOnly>
+				<ImageCarousel images={images} />
+			</MobileOnly>
+			<DesktopOnly>
+				<CenteredFade direction="up" triggerOnce>
+					<MosaicGrid>
+						<Fade direction="left" triggerOnce delay={300}>
+							<TallPhoto
+								src="/scissorLift.jpeg"
+								alt="A fully extended scissor lift being used to access and repair a light in a warehouse"
 							/>
-							<MiddlePhoto
-								src="/litLivingRoom.jpeg"
-								alt="A beautifully lit living room"
+						</Fade>
+						<MiddleColumn>
+							<MiddleFade
+								cascade
+								damping={0.4}
+								direction="up"
+								triggerOnce
+							>
+								<MiddlePhoto
+									src="/ceilingFan.jpeg"
+									alt="A ceiling fan installation"
+								/>
+								<MiddlePhoto
+									src="/litLivingRoom.jpeg"
+									alt="A beautifully lit living room"
+								/>
+							</MiddleFade>
+						</MiddleColumn>
+						<Fade direction="right" triggerOnce delay={300}>
+							<TallPhoto
+								src="/andrewSideView.jpeg"
+								alt="Electrician working on site"
 							/>
-						</MiddleFade>
-					</MiddleColumn>
-					<Fade direction="right" triggerOnce delay={300}>
-						<TallPhoto
-							src="/andrewSideView.jpeg"
-							alt="Electrician working on site"
-						/>
-					</Fade>
-				</MosaicGrid>
-			</CenteredFade>
+						</Fade>
+					</MosaicGrid>
+				</CenteredFade>
+			</DesktopOnly>
 		</Part2Container>
 	);
 };
@@ -117,4 +132,21 @@ const MiddlePhoto = styled.img`
 	width: 100%;
 	min-height: 0;
 	flex: 1;
+`;
+
+const MobileOnly = styled.div`
+	display: none;
+	width: 100%;
+	@media (max-width: 768px) {
+		display: flex;
+	}
+`;
+
+const DesktopOnly = styled.div`
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	@media (max-width: 768px) {
+		display: none;
+	}
 `;
