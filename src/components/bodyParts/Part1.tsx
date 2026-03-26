@@ -146,8 +146,13 @@ const MissionCopyContainer = styled.div`
 
 	@media (max-width: 768px) {
 		padding: 24px;
+		h3 {
+			font-size: 1rem;
+			font-weight: 700;
+		}
 		p {
-			line-height: 1;
+			font-size: 0.8rem;
+			line-height: 1.4;
 		}
 	}
 `;
@@ -162,6 +167,7 @@ const Photo = styled.img`
 	border-radius: 12px;
 	box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
 `;
+
 const BottomCardsRow = styled.div`
 	display: flex;
 	flex-direction: row;
@@ -194,10 +200,16 @@ const CopyContainer = styled.div`
 	box-shadow: 0 8px 10px rgba(0, 0, 0, 0.38);
 	h3,
 	ul {
-		margin: 0 0 15px 0;
 		text-align: left;
+		@media (min-width: 768px) {
+			margin: 0 0 15px 0;
+		}
 	}
+
 	ul {
+		@media (max-width: 768px) {
+			margin: 15px 0 0 0;
+		}
 		list-style-position: inside;
 	}
 	p {
@@ -206,9 +218,27 @@ const CopyContainer = styled.div`
 	@media (max-width: 768px) {
 		padding: 24px;
 		width: 100%;
-		p {
-			line-height: 1;
+		h3 {
+			font-size: 1rem;
+			font-weight: 700;
 		}
+		p,
+		li {
+			font-size: 0.8rem;
+			line-height: 1.4;
+		}
+	}
+`;
+
+const ServicesCopyContainer = styled(CopyContainer)`
+	@media (min-width: 768px) {
+		li {
+			font-size: 0.875em;
+		}
+	}
+
+	@media (max-width: 768px) {
+		margin-top: 0;
 	}
 `;
 
@@ -221,16 +251,8 @@ const RegionCopyContainer = styled(CopyContainer)`
 		justify-content: space-between;
 		flex: 1;
 		margin-bottom: 0;
-		padding: 0.6em 0;
-	}
-`;
-
-const ServicesCopyContainer = styled(CopyContainer)`
-	li {
-		font-size: 0.875em;
-	}
-
-	@media (max-width: 768px) {
-		margin-top: 0;
+		@media (min-width: 768px) {
+			padding: 0.6em 0;
+		}
 	}
 `;
