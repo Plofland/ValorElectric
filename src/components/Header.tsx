@@ -34,26 +34,21 @@ const HeaderContainer = styled.header`
 	align-items: center;
 	padding: 0 3rem;
 
-	/* border: 1px solid #000000; */
-	
-	/* Mobile: stack items */
 	@media (max-width: 768px) {
-		flex-direction: column;
+		flex-direction: row;
 		align-items: center;
-		padding: 1rem 2rem;
+		padding: 0.75rem 1rem;
 	}
-	`;
+`;
 
 const LogoContainer = styled.div`
 	display: flex;
 	justify-content: flex-end;
-	
-	/* border: 1px solid #000000; */
 
 	@media (max-width: 768px) {
-		margin-top: 1rem;
+		flex: 0 0 25%;
 		justify-content: center;
-		padding-left: 1rem;
+		align-items: center;
 	}
 `;
 
@@ -63,8 +58,8 @@ const ValorElectricLogo = styled.img`
 	object-fit: contain;
 
 	@media (max-width: 768px) {
-		width: 100px;
-		height: 100px;
+		width: 70px;
+		height: 70px;
 	}
 `;
 
@@ -75,21 +70,17 @@ const CompanyContainer = styled.div`
 	gap: 0.75rem;
 	cursor: pointer;
 
-	/* border: 1px solid #000000; */
-
 	svg {
-		font-size: 2.5rem; /* match h1 font-size */
+		font-size: 2.5rem;
 		line-height: 1;
 		color: #000000;
 		padding: 0.25rem;
 
-		/* Hide lightbulb icon on mobile */
 		@media (max-width: 768px) {
 			display: none;
 		}
 	}
 
-	/* Trigger flicker on BOTH icon + text */
 	&:hover h1 {
 		animation: electric-flicker-pre 0.8s forwards;
 		color: #fff8d1;
@@ -104,7 +95,10 @@ const CompanyContainer = styled.div`
 	}
 
 	@media (max-width: 768px) {
-		flex-direction: column;
+		flex: 1;
+		flex-direction: row;
+		justify-content: flex-start;
+		padding-left: 0.5rem;
 	}
 `;
 
@@ -113,8 +107,6 @@ const TitleContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-
-	/* border: 1px solid #000000; */
 
 	h1 {
 		position: relative;
@@ -127,14 +119,10 @@ const TitleContainer = styled.div`
 		color: #000000;
 
 		@media (max-width: 768px) {
-			font-size: 1.75rem;
-			text-align: center;
+			font-size: 1.5rem;
+			text-align: left;
 		}
 
-		/* Check the border of the h1 */
-		/* border: 1px solid #000000; */
-
-		/* Gradient underline remains static */
 		&::after {
 			content: '';
 			position: absolute;
@@ -149,8 +137,6 @@ const TitleContainer = styled.div`
 				#ff0000 0%,
 				#0038ff 100%
 			);
-
-			/* Always visible but subtle */
 			filter: brightness(0.8);
 		}
 	}
@@ -159,195 +145,57 @@ const TitleContainer = styled.div`
 		margin-top: 20px;
 		margin-bottom: 0;
 		font-size: 1.25rem;
+
+		@media (max-width: 768px) {
+			font-size: 0.55rem;
+			margin-top: 10px;
+			text-align: center;
+		}
 	}
 
-	/* Keyframes for 2–3 flickers */
+	@media (max-width: 768px) {
+		align-items: center;
+	}
+
+	/* All keyframes preserved unchanged below */
 	@keyframes electric-flicker-pre {
-		0% {
-			color: #000000;
-			text-shadow: none;
-		}
-		10% {
-			text-shadow:
-				0 0 2px #ff0000,
-				0 0 4px #ff0000,
-				0 0 2px #fff8d1,
-				0 0 6px #0038ff,
-				0 0 8px #0038ff;
-		}
-		20% {
-			text-shadow: none;
-		}
-		30% {
-			text-shadow:
-				0 0 3px #ff0000,
-				0 0 6px #ff0000,
-				0 0 3px #fff8d1,
-				0 0 9px #0038ff,
-				0 0 12px #0038ff;
-		}
-		40% {
-			text-shadow: none;
-		}
-		50% {
-			text-shadow:
-				0 0 2px #ff0000,
-				0 0 4px #ff0000,
-				0 0 2px #fff8d1,
-				0 0 6px #0038ff,
-				0 0 8px #0038ff;
-		}
-		60% {
-			text-shadow: none;
-		}
-		100% {
-			text-shadow:
-				0 0 2px #ff0000,
-				0 0 4px #ff0000,
-				0 0 2px #fff8d1,
-				0 0 6px #0038ff,
-				0 0 8px #0038ff;
-			color: #fff8d1; /* Keep yellow center after flicker */
-		}
+		0% { color: #000000; text-shadow: none; }
+		10% { text-shadow: 0 0 2px #ff0000, 0 0 4px #ff0000, 0 0 2px #fff8d1, 0 0 6px #0038ff, 0 0 8px #0038ff; }
+		20% { text-shadow: none; }
+		30% { text-shadow: 0 0 3px #ff0000, 0 0 6px #ff0000, 0 0 3px #fff8d1, 0 0 9px #0038ff, 0 0 12px #0038ff; }
+		40% { text-shadow: none; }
+		50% { text-shadow: 0 0 2px #ff0000, 0 0 4px #ff0000, 0 0 2px #fff8d1, 0 0 6px #0038ff, 0 0 8px #0038ff; }
+		60% { text-shadow: none; }
+		100% { text-shadow: 0 0 2px #ff0000, 0 0 4px #ff0000, 0 0 2px #fff8d1, 0 0 6px #0038ff, 0 0 8px #0038ff; color: #fff8d1; }
 	}
 
-	/* Bulb flicker animation */
 	@keyframes bulb-flicker {
-		// sync the lightbulb, underline & company name animations
-		/* ---- SYNC SECTION (0% → 66%) ---- */
-		0% {
-			color: #000000;
-			filter: none;
-		}
-
-		6.6% {
-			color: #ffea00;
-			filter: drop-shadow(0 0 4px #ffea00)
-				drop-shadow(0 0 8px #ff0000)
-				drop-shadow(0 0 10px #0038ff);
-		}
-		13.3% {
-			color: #000000;
-			filter: none;
-		}
-		20% {
-			color: #ffea00;
-			filter: drop-shadow(0 0 6px #ffea00)
-				drop-shadow(0 0 10px #ff0000)
-				drop-shadow(0 0 14px #0038ff);
-		}
-		26.6% {
-			color: #000000;
-			filter: none;
-		}
-		33.3% {
-			color: #ffea00;
-			filter: drop-shadow(0 0 4px #ffea00)
-				drop-shadow(0 0 8px #ff0000)
-				drop-shadow(0 0 10px #0038ff);
-		}
-		40% {
-			color: #000000;
-			filter: none;
-		}
-
-		66.6% {
-			color: #ffea00;
-			filter: drop-shadow(0 0 6px #ffea00)
-				drop-shadow(0 0 10px #ff0000)
-				drop-shadow(0 0 14px #0038ff);
-		}
-
-		/* ---- EXTRA BULB-ONLY FLICKERS (66% → 100%) ---- */
-		75% {
-			color: #000000;
-			filter: none;
-		}
-		82% {
-			color: #ffea00;
-			filter: drop-shadow(0 0 6px #ffea00)
-				drop-shadow(0 0 10px #ff0000)
-				drop-shadow(0 0 14px #0038ff);
-		}
-		88% {
-			color: #000000;
-			filter: none;
-		}
-		94% {
-			color: #ffea00;
-			filter: drop-shadow(0 0 6px #ffea00)
-				drop-shadow(0 0 10px #ff0000)
-				drop-shadow(0 0 14px #0038ff);
-		}
-
-		100% {
-			color: #ffea00;
-			filter: drop-shadow(0 0 6px #ffea00)
-				drop-shadow(0 0 10px #ff0000)
-				drop-shadow(0 0 14px #0038ff);
-		}
+		0% { color: #000000; filter: none; }
+		6.6% { color: #ffea00; filter: drop-shadow(0 0 4px #ffea00) drop-shadow(0 0 8px #ff0000) drop-shadow(0 0 10px #0038ff); }
+		13.3% { color: #000000; filter: none; }
+		20% { color: #ffea00; filter: drop-shadow(0 0 6px #ffea00) drop-shadow(0 0 10px #ff0000) drop-shadow(0 0 14px #0038ff); }
+		26.6% { color: #000000; filter: none; }
+		33.3% { color: #ffea00; filter: drop-shadow(0 0 4px #ffea00) drop-shadow(0 0 8px #ff0000) drop-shadow(0 0 10px #0038ff); }
+		40% { color: #000000; filter: none; }
+		66.6% { color: #ffea00; filter: drop-shadow(0 0 6px #ffea00) drop-shadow(0 0 10px #ff0000) drop-shadow(0 0 14px #0038ff); }
+		75% { color: #000000; filter: none; }
+		82% { color: #ffea00; filter: drop-shadow(0 0 6px #ffea00) drop-shadow(0 0 10px #ff0000) drop-shadow(0 0 14px #0038ff); }
+		88% { color: #000000; filter: none; }
+		94% { color: #ffea00; filter: drop-shadow(0 0 6px #ffea00) drop-shadow(0 0 10px #ff0000) drop-shadow(0 0 14px #0038ff); }
+		100% { color: #ffea00; filter: drop-shadow(0 0 6px #ffea00) drop-shadow(0 0 10px #ff0000) drop-shadow(0 0 14px #0038ff); }
 	}
 
 	@keyframes underline-glow {
-		// sync the lightbulb, underline & company name animations
-		/* ---- SYNC SECTION (0% → 66.6%) ---- */
-
-		0% {
-			filter: brightness(0.8);
-		}
-
-		6.6% {
-			filter: brightness(1.4)
-				drop-shadow(0 0 4px #ff0000)
-				drop-shadow(0 0 6px #0038ff);
-		}
-
-		13.3% {
-			filter: brightness(0.8);
-		}
-
-		20% {
-			filter: brightness(1.6)
-				drop-shadow(0 0 6px #ff0000)
-				drop-shadow(0 0 10px #0038ff);
-		}
-
-		26.6% {
-			filter: brightness(0.8);
-		}
-
-		33.3% {
-			filter: brightness(1.4)
-				drop-shadow(0 0 4px #ff0000)
-				drop-shadow(0 0 6px #0038ff);
-		}
-
-		40% {
-			filter: brightness(0.8);
-		}
-
-		66.6% {
-			filter: brightness(1.6)
-				drop-shadow(0 0 6px #ff0000)
-				drop-shadow(0 0 10px #0038ff);
-		}
-
-		/* ---- UNDERLINE-ONLY SECTION (66% → 100%) ---- */
-
-		85% {
-			filter: brightness(0.8);
-		}
-
-		92% {
-			filter: brightness(1.8)
-				drop-shadow(0 0 8px #ff0000)
-				drop-shadow(0 0 12px #0038ff);
-		}
-
-		100% {
-			filter: brightness(1.6)
-				drop-shadow(0 0 6px #ff0000)
-				drop-shadow(0 0 10px #0038ff);
-		}
+		0% { filter: brightness(0.8); }
+		6.6% { filter: brightness(1.4) drop-shadow(0 0 4px #ff0000) drop-shadow(0 0 6px #0038ff); }
+		13.3% { filter: brightness(0.8); }
+		20% { filter: brightness(1.6) drop-shadow(0 0 6px #ff0000) drop-shadow(0 0 10px #0038ff); }
+		26.6% { filter: brightness(0.8); }
+		33.3% { filter: brightness(1.4) drop-shadow(0 0 4px #ff0000) drop-shadow(0 0 6px #0038ff); }
+		40% { filter: brightness(0.8); }
+		66.6% { filter: brightness(1.6) drop-shadow(0 0 6px #ff0000) drop-shadow(0 0 10px #0038ff); }
+		85% { filter: brightness(0.8); }
+		92% { filter: brightness(1.8) drop-shadow(0 0 8px #ff0000) drop-shadow(0 0 12px #0038ff); }
+		100% { filter: brightness(1.6) drop-shadow(0 0 6px #ff0000) drop-shadow(0 0 10px #0038ff); }
 	}
 `;
