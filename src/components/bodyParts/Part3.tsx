@@ -38,7 +38,7 @@ const Part3Container = styled.div`
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	padding: 4rem 0;
+	padding: 2rem 2rem 4rem 2rem;
 	align-items: center;
 	justify-content: center;
 	gap: 1.5rem;

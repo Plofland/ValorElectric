@@ -65,7 +65,8 @@ const Part2Container = styled.div`
 	padding: 4rem 2rem;
 
 	@media (max-width: 768px) {
-		padding: 1rem;
+		padding: 1rem 0; 
+		overflow: hidden; 
 	}
 `;
 

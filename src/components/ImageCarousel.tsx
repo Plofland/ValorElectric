@@ -78,7 +78,7 @@ const Track = styled.div`
 	width: 100%;
 	overflow: hidden;
 	/* Peek: show 8% of adjacent slides on each side */
-	padding: 0 8%;
+	padding: 1rem 8%;
 	box-sizing: border-box;
 `;
 
@@ -105,7 +105,7 @@ const Slide = styled.div`
 
 const SlideImg = styled.img`
 	width: 100%;
-	height: 260px;
+	height: 400px;
 	object-fit: cover;
 	object-position: center;
 	display: block;

@@ -27,8 +27,4 @@ const BodyContainer = styled.div`
 
 	// Soft Neutral (Modern & Balanced)
 	background-color: #ececec;
-
-	@media (max-width: 768px) {
-		padding: 1rem;
-	}
 `;
