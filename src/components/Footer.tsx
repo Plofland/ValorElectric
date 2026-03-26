@@ -11,24 +11,24 @@ const Footer = () => {
 			<ContactContainer>
 				<Fade direction="up" cascade damping={0.15} triggerOnce>
 					{/* Phone Us (Clickable) */}
-					<ContactCard href="tel:5555555555">
+					<ContactCard href="tel:9197989485">
 						<IconContainer>
 							<FontAwesomeIcon icon={faPhone} />
 						</IconContainer>
 						<ContactText>
 							<h3>Call Us</h3>
-							555-555-5555
+							919-798-9485
 						</ContactText>
 					</ContactCard>
 
 					{/* Mail Us (Clickable) */}
-					<ContactCard href="mailto:valorElectric@gmail.com">
+					<ContactCard href="mailto:services@valorelectricnc.com">
 						<IconContainer>
 							<FontAwesomeIcon icon={faEnvelope} />
 						</IconContainer>
 						<ContactText>
 							<h3>Mail Us</h3>
-							valorElectric@gmail.com
+							services@valorelectricnc.com
 						</ContactText>
 					</ContactCard>
 					{/* Facebook (Clickable) */}
