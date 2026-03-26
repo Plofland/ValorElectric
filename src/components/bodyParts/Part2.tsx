@@ -31,7 +31,7 @@ const Part2 = () => {
 					</MiddleColumn>
 					<Fade direction="right" triggerOnce delay={300}>
 						<TallPhoto
-							src="/andrewFromBehind.jpeg"
+							src="/andrewSideView.jpeg"
 							alt="Electrician working on site"
 						/>
 					</Fade>

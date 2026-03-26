@@ -7,7 +7,7 @@ const Part1 = () => {
 			<LeftSection>
 				<CenteredFade direction="left" triggerOnce>
 					<Photo
-						src="/andrewSideView.jpeg"
+						src="/andrewLightbulb.jpeg"
 						alt="Side profile portrait of Andrew the electrician as he works on an electrical outlet"
 					/>
 				</CenteredFade>
