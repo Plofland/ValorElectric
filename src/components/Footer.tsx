@@ -17,7 +17,7 @@ const Footer = () => {
 						</IconContainer>
 						<ContactText>
 							<h3>Call Us</h3>
-							919-798-9485
+							<p>919-798-9485</p>
 						</ContactText>
 					</ContactCard>
 
@@ -28,7 +28,7 @@ const Footer = () => {
 						</IconContainer>
 						<ContactText>
 							<h3>Mail Us</h3>
-							services@valorelectricnc.com
+							<p>services@valorelectricnc.com</p>
 						</ContactText>
 					</ContactCard>
 					{/* Facebook (Clickable) */}
@@ -119,5 +119,12 @@ const ContactText = styled.div`
 
 	ul {
 		list-style-position: inside;
+	}
+
+	@media (max-width: 768px) {
+		p {
+			font-size: 0.75rem;
+			line-height: 2;
+		}
 	}
 `;
