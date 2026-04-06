@@ -8,7 +8,7 @@ const Part3 = () => {
 				<BeforeAfterContainer>
 					<PhotoWrapper>
 						<Photo
-							src="/fuseBox.jpeg"
+							src="/fuseBox.jpg"
 							alt="Before image of a fuse box containing fuses"
 						/>
 					</PhotoWrapper>
@@ -23,7 +23,7 @@ const Part3 = () => {
 				<BeforeAfterContainer>
 					<PhotoWrapper>
 						<Photo
-							src="/fuseBoxAfter.jpeg"
+							src="/fuseBoxAfter.jpg"
 							alt="After image of a modern circuit breaker panel"
 						/>
 					</PhotoWrapper>

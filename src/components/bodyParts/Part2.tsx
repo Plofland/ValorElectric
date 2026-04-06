@@ -8,7 +8,7 @@ const Part2 = () => {
 			src: '/scissorLift.jpeg',
 			alt: 'A fully extended scissor lift being used to access and repair a light in a warehouse'
 		},
-		{ src: '/ceilingFan.jpeg', alt: 'A ceiling fan installation' },
+		{ src: '/ceilingFan3LongCropped.jpg', alt: 'A ceiling fan installation' },
 		{ src: '/litLivingRoom.jpeg', alt: 'A beautifully lit living room' },
 		{ src: '/andrewSideView.jpeg', alt: 'Electrician working on site' }
 	];
@@ -34,19 +34,19 @@ const Part2 = () => {
 								triggerOnce
 							>
 								<MiddlePhoto
-									src="/ceilingFan.jpeg"
-									alt="A ceiling fan installation"
+									src="/dinningRoomLightCropped.jpg"
+									alt="A dining room light installation"
 								/>
 								<MiddlePhoto
-									src="/litLivingRoom.jpeg"
-									alt="A beautifully lit living room"
+									src="/andrewFromBehindCropped.jpg"
+									alt="Electrician working on site"
 								/>
 							</MiddleFade>
 						</MiddleColumn>
 						<Fade direction="right" triggerOnce delay={300}>
 							<TallPhoto
-								src="/andrewSideView.jpeg"
-								alt="Electrician working on site"
+								src="/ceilingFan3LongCropped.jpg"
+								alt="A ceiling fan installation"
 							/>
 						</Fade>
 					</MosaicGrid>
